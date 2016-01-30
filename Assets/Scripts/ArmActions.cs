@@ -7,33 +7,36 @@ namespace TerribleMorningPerson
 	public class ArmActions : PlayerActionSet
 	{
 		public PlayerAction Grab;
-		public PlayerAction Left;
-		public PlayerAction Right;
-		public PlayerAction Up;
-		public PlayerAction Down;
-		public PlayerAction In;
-		public PlayerAction Out;
-		public PlayerAction SpinLeft;
-		public PlayerAction SpinRight;
-		public PlayerOneAxisAction Rotate;
-		public PlayerTwoAxisAction Pan;
-		public PlayerOneAxisAction InOut;
+		public PlayerAction WristRotateLeft;
+		public PlayerAction WristRotateRight;
+		public PlayerAction WristExtend;
+		public PlayerAction WristRetract;
+		public PlayerAction ElbowExtend;
+		public PlayerAction ElbowRetract;
+		public PlayerAction ShoulderLiftUp;
+		public PlayerAction ShoulderDropDown;
+		public PlayerOneAxisAction WristRotateAxis;
+		public PlayerOneAxisAction WristExtendAxis;
+		public PlayerOneAxisAction ElbowExtendAxis;
+		public PlayerOneAxisAction ShoulderLiftAxis;
+
 
 
 		public ArmActions()
 		{
 			Grab = CreatePlayerAction( "Grab" );
-			Left = CreatePlayerAction( "Left" );
-			Right = CreatePlayerAction( "Right" );
-			Up = CreatePlayerAction( "Up" );
-			Down = CreatePlayerAction( "Down" );
-			In = CreatePlayerAction( "In" );
-			Out = CreatePlayerAction( "Out" );
-			SpinLeft = CreatePlayerAction ("SpinLeft");
-			SpinRight = CreatePlayerAction ("SpinRight");
-			InOut = CreateOneAxisPlayerAction(In, Out);
-			Rotate = CreateOneAxisPlayerAction(SpinLeft, SpinRight);
-			Pan = CreateTwoAxisPlayerAction(Left,Right,Down,Up);
+			WristRotateLeft = CreatePlayerAction( "WristRotateLeft" );
+			WristRotateRight = CreatePlayerAction( "WristRotateRight" );
+			WristExtend = CreatePlayerAction( "WristExtend" );
+			WristRetract = CreatePlayerAction( "WristRetract" );
+			ElbowExtend = CreatePlayerAction( "ElbowExtend" );
+			ElbowRetract = CreatePlayerAction( "ElbowRetract" );
+			ShoulderLiftUp = CreatePlayerAction ("ShoulderLiftUp");
+			ShoulderDropDown = CreatePlayerAction ("ShoulderDropDown");
+			WristRotateAxis = CreateOneAxisPlayerAction(WristRotateLeft, WristRotateRight);
+			WristExtendAxis = CreateOneAxisPlayerAction(WristExtend, WristRetract);
+			ElbowExtendAxis = CreateOneAxisPlayerAction(ElbowRetract,ElbowExtend);
+			ShoulderLiftAxis = CreateOneAxisPlayerAction(ShoulderLiftUp, ShoulderDropDown);
 		}
 
 
@@ -42,14 +45,14 @@ namespace TerribleMorningPerson
 			var actions = new ArmActions();
 
 			actions.Grab.AddDefaultBinding( Key.Space );
-			actions.Up.AddDefaultBinding( Key.UpArrow );
-			actions.Down.AddDefaultBinding( Key.DownArrow );
-			actions.Left.AddDefaultBinding( Key.LeftArrow );
-			actions.Right.AddDefaultBinding( Key.RightArrow );
-			actions.In.AddDefaultBinding( Key.W );
-			actions.Out.AddDefaultBinding( Key.S );
-			actions.SpinLeft.AddDefaultBinding (Key.A);
-			actions.SpinRight.AddDefaultBinding (Key.D);
+			actions.WristRotateLeft.AddDefaultBinding( Key.LeftArrow );
+			actions.WristRotateRight.AddDefaultBinding( Key.RightArrow );
+			actions.WristExtend.AddDefaultBinding( Key.UpArrow );
+			actions.WristRetract.AddDefaultBinding( Key.DownArrow );
+			actions.ElbowExtend.AddDefaultBinding( Key.W );
+			actions.ElbowRetract.AddDefaultBinding( Key.S );
+			actions.ShoulderLiftUp.AddDefaultBinding (Key.A);
+			actions.ShoulderDropDown.AddDefaultBinding (Key.D);
 
 			return actions;
 		}
@@ -61,21 +64,17 @@ namespace TerribleMorningPerson
 
 			actions.Grab.AddDefaultBinding ( InputControlType.Action1);
 
-			actions.Up.AddDefaultBinding( InputControlType.LeftStickUp );
-			actions.Down.AddDefaultBinding( InputControlType.LeftStickDown );
-			actions.Left.AddDefaultBinding( InputControlType.LeftStickLeft );
-			actions.Right.AddDefaultBinding( InputControlType.LeftStickRight );
+			actions.ElbowExtend.AddDefaultBinding( InputControlType.LeftStickUp );
+			actions.ElbowRetract.AddDefaultBinding( InputControlType.LeftStickDown );
 
-			actions.Up.AddDefaultBinding( InputControlType.DPadUp );
-			actions.Down.AddDefaultBinding( InputControlType.DPadDown );
-			actions.Left.AddDefaultBinding( InputControlType.DPadLeft );
-			actions.Right.AddDefaultBinding( InputControlType.DPadRight );
-
-			actions.In.AddDefaultBinding (InputControlType.RightStickUp);
-			actions.Out.AddDefaultBinding (InputControlType.RightStickDown);
-
-			actions.SpinLeft.AddDefaultBinding (InputControlType.RightStickLeft);
-			actions.SpinRight.AddDefaultBinding (InputControlType.RightStickRight);
+			actions.ShoulderLiftUp.AddDefaultBinding( InputControlType.LeftStickLeft );
+			actions.ShoulderDropDown.AddDefaultBinding( InputControlType.LeftStickRight );
+		
+			actions.WristRotateLeft.AddDefaultBinding (InputControlType.RightStickLeft );
+			actions.WristRotateRight.AddDefaultBinding (InputControlType.RightStickRight );
+			actions.WristExtend.AddDefaultBinding (InputControlType.RightStickUp);
+			actions.WristRetract.AddDefaultBinding (InputControlType.RightStickDown);
+		
 
 			return actions;
 		}
