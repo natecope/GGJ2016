@@ -17,7 +17,7 @@ namespace TerribleMorningPerson
 		const int maxPlayers = 4;
 
 		List<Vector3> playerPositions = new List<Vector3>() {
-			new Vector3( -1, 1, -10 ),
+			new Vector3( 1.81f, 1.32f, -4.41f ),
 			new Vector3( 1, 1, -10 ),
 			new Vector3( -1, -1, -10 ),
 			new Vector3( 1, -1, -10 ),
@@ -136,7 +136,7 @@ namespace TerribleMorningPerson
 				playerPositions.RemoveAt( 0 );
 
 				var gameObject = (GameObject) Instantiate( playerPrefab, playerPosition, Quaternion.identity );
-				var player = gameObject.GetComponent<Player>();
+				var player = gameObject.GetComponentInChildren<Player>();
 
 				if (inputDevice == null)
 				{
