@@ -2,32 +2,38 @@
 using InControl;
 
 
-namespace MultiplayerWithBindingsExample
+namespace TerribleMorningPerson
 {
 	public class PlayerActions : PlayerActionSet
 	{
-		public PlayerAction Green;
-		public PlayerAction Red;
-		public PlayerAction Blue;
-		public PlayerAction Yellow;
+		public PlayerAction Grab;
 		public PlayerAction Left;
 		public PlayerAction Right;
 		public PlayerAction Up;
 		public PlayerAction Down;
-		public PlayerTwoAxisAction Rotate;
+		public PlayerAction In;
+		public PlayerAction Out;
+		public PlayerAction SpinLeft;
+		public PlayerAction SpinRight;
+		public PlayerOneAxisAction Rotate;
+		public PlayerTwoAxisAction Pan;
+		public PlayerOneAxisAction InOut;
 
 
 		public PlayerActions()
 		{
-			Green = CreatePlayerAction( "Green" );
-			Red = CreatePlayerAction( "Red" );
-			Blue = CreatePlayerAction( "Blue" );
-			Yellow = CreatePlayerAction( "Yellow" );
+			Grab = CreatePlayerAction( "Grab" );
 			Left = CreatePlayerAction( "Left" );
 			Right = CreatePlayerAction( "Right" );
 			Up = CreatePlayerAction( "Up" );
 			Down = CreatePlayerAction( "Down" );
-			Rotate = CreateTwoAxisPlayerAction( Left, Right, Down, Up );
+			In = CreatePlayerAction( "In" );
+			Out = CreatePlayerAction( "Out" );
+			SpinLeft = CreatePlayerAction ("SpinLeft");
+			SpinRight = CreatePlayerAction ("SpinRight");
+			InOut = CreateOneAxisPlayerAction(In, Out);
+			Rotate = CreateOneAxisPlayerAction(SpinLeft, SpinRight);
+			Pan = CreateTwoAxisPlayerAction(Left,Right,Down,Up);
 		}
 
 
@@ -35,15 +41,15 @@ namespace MultiplayerWithBindingsExample
 		{
 			var actions = new PlayerActions();
 
-			actions.Green.AddDefaultBinding( Key.A );
-			actions.Red.AddDefaultBinding( Key.S );
-			actions.Blue.AddDefaultBinding( Key.D );
-			actions.Yellow.AddDefaultBinding( Key.F );
-
+			actions.Grab.AddDefaultBinding( Key.Space );
 			actions.Up.AddDefaultBinding( Key.UpArrow );
 			actions.Down.AddDefaultBinding( Key.DownArrow );
 			actions.Left.AddDefaultBinding( Key.LeftArrow );
 			actions.Right.AddDefaultBinding( Key.RightArrow );
+			actions.In.AddDefaultBinding( Key.W );
+			actions.Out.AddDefaultBinding( Key.S );
+			actions.SpinLeft.AddDefaultBinding (Key.A);
+			actions.SpinRight.AddDefaultBinding (Key.D);
 
 			return actions;
 		}
@@ -53,10 +59,7 @@ namespace MultiplayerWithBindingsExample
 		{
 			var actions = new PlayerActions();
 
-			actions.Green.AddDefaultBinding( InputControlType.Action1 );
-			actions.Red.AddDefaultBinding( InputControlType.Action2 );
-			actions.Blue.AddDefaultBinding( InputControlType.Action3 );
-			actions.Yellow.AddDefaultBinding( InputControlType.Action4 );
+			actions.Grab.AddDefaultBinding ( InputControlType.Action1);
 
 			actions.Up.AddDefaultBinding( InputControlType.LeftStickUp );
 			actions.Down.AddDefaultBinding( InputControlType.LeftStickDown );
@@ -67,6 +70,12 @@ namespace MultiplayerWithBindingsExample
 			actions.Down.AddDefaultBinding( InputControlType.DPadDown );
 			actions.Left.AddDefaultBinding( InputControlType.DPadLeft );
 			actions.Right.AddDefaultBinding( InputControlType.DPadRight );
+
+			actions.In.AddDefaultBinding (InputControlType.RightStickUp);
+			actions.Out.AddDefaultBinding (InputControlType.RightStickDown);
+
+			actions.SpinLeft.AddDefaultBinding (InputControlType.RightStickLeft);
+			actions.SpinRight.AddDefaultBinding (InputControlType.RightStickRight);
 
 			return actions;
 		}

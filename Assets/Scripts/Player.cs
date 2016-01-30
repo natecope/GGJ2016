@@ -3,18 +3,25 @@ using UnityEngine;
 using InControl;
 
 
-namespace MultiplayerBasicExample
+namespace TerribleMorningPerson
 {
-	// This is just a simple "player" script that rotates and colors a cube
-	// based on input read from the device on its inputDevice field.
-	//
-	// See comments in PlayerManager.cs for more details.
-	//
+
 	public class Player : MonoBehaviour
 	{
-		public InputDevice Device { get; set; }
+		public PlayerActions Actions { get; set; }
+		public float panningSpeed;
+		public float rotateSpeed;
 
 		Renderer cachedRenderer;
+
+
+		void OnDisable()
+		{
+			if (Actions != null)
+			{
+				Actions.Destroy();
+			}
+		}
 
 
 		void Start()
@@ -25,47 +32,50 @@ namespace MultiplayerBasicExample
 
 		void Update()
 		{
-			if (Device == null)
+			if (Actions == null)
 			{
-				// If no controller set, just make it translucent white.
+				// If no controller exists for this cube, just make it translucent.
 				cachedRenderer.material.color = new Color( 1.0f, 1.0f, 1.0f, 0.2f );
 			}
 			else
 			{
-				// Set object material color based on which action is pressed.
-				cachedRenderer.material.color = GetColorFromInput();
 
-				// Rotate object with left stick or d-pad.
-				transform.Rotate( Vector3.down, 500.0f * Time.deltaTime * Device.Direction.X, Space.World );
-				transform.Rotate( Vector3.right, 500.0f * Time.deltaTime * Device.Direction.Y, Space.World );
+				// Moving up,down,left right on 2d plane
+				transform.Translate(Actions.Pan.Value * Time.deltaTime * panningSpeed, Space.World);
+
+				// Moving forward and back in 3d space
+				transform.Translate(Vector3.back * Actions.InOut.Value * Time.deltaTime * panningSpeed, Space.World); 
+
+				// Rotating left/right
+				transform.Rotate(Vector3.back * Actions.Rotate.Value * Time.deltaTime * rotateSpeed, Space.World);
 			}
 		}
 
 
-		Color GetColorFromInput()
+		/*Color GetColorFromInput()
 		{
-			if (Device.Action1)
+			if (Actions.Green)
 			{
 				return Color.green;
 			}
 
-			if (Device.Action2)
+			if (Actions.Red)
 			{
 				return Color.red;
 			}
 
-			if (Device.Action3)
+			if (Actions.Blue)
 			{
 				return Color.blue;
 			}
 
-			if (Device.Action4)
+			if (Actions.Yellow)
 			{
 				return Color.yellow;
 			}
 
 			return Color.white;
-		}
+		}*/
 	}
 }
 

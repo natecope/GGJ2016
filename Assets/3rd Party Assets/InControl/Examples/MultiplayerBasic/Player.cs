@@ -3,27 +3,18 @@ using UnityEngine;
 using InControl;
 
 
-namespace MultiplayerWithBindingsExample
+namespace MultiplayerBasicExample
 {
 	// This is just a simple "player" script that rotates and colors a cube
-	// based on input read from the actions field.
+	// based on input read from the device on its inputDevice field.
 	//
 	// See comments in PlayerManager.cs for more details.
 	//
 	public class Player : MonoBehaviour
 	{
-		public PlayerActions Actions { get; set; }
+		public InputDevice Device { get; set; }
 
 		Renderer cachedRenderer;
-
-
-		void OnDisable()
-		{
-			if (Actions != null)
-			{
-				Actions.Destroy();
-			}
-		}
 
 
 		void Start()
@@ -34,41 +25,41 @@ namespace MultiplayerWithBindingsExample
 
 		void Update()
 		{
-			if (Actions == null)
+			if (Device == null)
 			{
-				// If no controller exists for this cube, just make it translucent.
+				// If no controller set, just make it translucent white.
 				cachedRenderer.material.color = new Color( 1.0f, 1.0f, 1.0f, 0.2f );
 			}
 			else
 			{
-				// Set object material color.
+				// Set object material color based on which action is pressed.
 				cachedRenderer.material.color = GetColorFromInput();
 
-				// Rotate target object.
-				transform.Rotate( Vector3.down, 500.0f * Time.deltaTime * Actions.Rotate.X, Space.World );
-				transform.Rotate( Vector3.right, 500.0f * Time.deltaTime * Actions.Rotate.Y, Space.World );
+				// Rotate object with left stick or d-pad.
+				transform.Rotate( Vector3.down, 500.0f * Time.deltaTime * Device.Direction.X, Space.World );
+				transform.Rotate( Vector3.right, 500.0f * Time.deltaTime * Device.Direction.Y, Space.World );
 			}
 		}
 
 
 		Color GetColorFromInput()
 		{
-			if (Actions.Green)
+			if (Device.Action1)
 			{
 				return Color.green;
 			}
 
-			if (Actions.Red)
+			if (Device.Action2)
 			{
 				return Color.red;
 			}
 
-			if (Actions.Blue)
+			if (Device.Action3)
 			{
 				return Color.blue;
 			}
 
-			if (Actions.Yellow)
+			if (Device.Action4)
 			{
 				return Color.yellow;
 			}
