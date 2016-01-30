@@ -32,7 +32,7 @@ public class CoffeeMachine : MonoBehaviour {
                 else
                 {
                     makeCoffee = true;
-                    StartCoroutine(TurnOn(0.45F));
+                    StartCoroutine(TurnOn(0.05F));
 
                 }
             }
@@ -56,7 +56,7 @@ public class CoffeeMachine : MonoBehaviour {
             Instantiate(coffee, gun.transform.position, coffee.transform.rotation);
             yield return new WaitForSeconds(waitTime);
 
-            StartCoroutine(TurnOn(0.45F));
+            StartCoroutine(TurnOn(0.05F));
         
     }
 }
