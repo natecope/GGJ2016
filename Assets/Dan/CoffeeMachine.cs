@@ -19,6 +19,7 @@ public class CoffeeMachine : MonoBehaviour {
     
     public void OnCollisionEnter(Collision col)
     {
+        print("hit");
         if (col.gameObject.name != "Kcup")
         {
             if (canMakeCoffee == true)
@@ -31,7 +32,7 @@ public class CoffeeMachine : MonoBehaviour {
                 else
                 {
                     makeCoffee = true;
-                    StartCoroutine(TurnOn(0.05F));
+                    StartCoroutine(TurnOn(0.45F));
 
                 }
             }
@@ -55,7 +56,7 @@ public class CoffeeMachine : MonoBehaviour {
             Instantiate(coffee, gun.transform.position, coffee.transform.rotation);
             yield return new WaitForSeconds(waitTime);
 
-            StartCoroutine(TurnOn(0.05F));
+            StartCoroutine(TurnOn(0.45F));
         
     }
 }

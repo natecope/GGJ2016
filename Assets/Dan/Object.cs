@@ -12,8 +12,8 @@ public class Object : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (grabbed == true)
-        { transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z); }
+       // if (grabbed == true)
+        //{ transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z); }
 	}
     public void OnMouseDown()
     {
