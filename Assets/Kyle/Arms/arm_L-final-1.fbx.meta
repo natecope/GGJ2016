@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: f5ac88e5abed641418d442b74b9ff5ca
+timeCreated: 1454196822
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Arms
+    100004: JT_Elbow_L
+    100006: JT_Elbow_R
+    100008: JT_MiddleFinger_0_L
+    100010: JT_MiddleFinger_0_R
+    100012: JT_MiddleFinger_1_L
+    100014: JT_MiddleFinger_1_R
+    100016: JT_MiddleFinger_2_L
+    100018: JT_MiddleFinger_2_R
+    100020: JT_MiddleFinger_3_L
+    100022: JT_MiddleFinger_3_R
+    100024: JT_PinkyFinger_0_L
+    100026: JT_PinkyFinger_0_R
+    100028: JT_PinkyFinger_1_L
+    100030: JT_PinkyFinger_1_R
+    100032: JT_PinkyFinger_2_L
+    100034: JT_PinkyFinger_2_R
+    100036: JT_PinkyFinger_3_L
+    100038: JT_PinkyFinger_3_R
+    100040: JT_PointerFinger_0_L
+    100042: JT_PointerFinger_0_R
+    100044: JT_PointerFinger_1_L
+    100046: JT_PointerFinger_1_R
+    100048: JT_PointerFinger_2_L
+    100050: JT_PointerFinger_2_R
+    100052: JT_PointerFinger_3_L
+    100054: JT_PointerFinger_3_R
+    100056: JT_RingFinger_0_L
+    100058: JT_RingFinger_0_R
+    100060: JT_RingFinger_1_L
+    100062: JT_RingFinger_1_R
+    100064: JT_RingFinger_2_L
+    100066: JT_RingFinger_2_R
+    100068: JT_RingFinger_3_L
+    100070: JT_RingFinger_3_R
+    100072: JT_Shoulder_L
+    100074: JT_Shoulder_R
+    100076: JT_ThumbFinger_0_L
+    100078: JT_ThumbFinger_0_R
+    100080: JT_ThumbFinger_1_L
+    100082: JT_ThumbFinger_1_R
+    100084: JT_ThumbFinger_2_L
+    100086: JT_ThumbFinger_2_R
+    100088: JT_ThumbFinger_3_L
+    100090: JT_ThumbFinger_3_R
+    100092: JT_Wrist_L
+    100094: JT_Wrist_R
+    100096: transform1
+    400000: //RootNode
+    400002: Arms
+    400004: JT_Elbow_L
+    400006: JT_Elbow_R
+    400008: JT_MiddleFinger_0_L
+    400010: JT_MiddleFinger_0_R
+    400012: JT_MiddleFinger_1_L
+    400014: JT_MiddleFinger_1_R
+    400016: JT_MiddleFinger_2_L
+    400018: JT_MiddleFinger_2_R
+    400020: JT_MiddleFinger_3_L
+    400022: JT_MiddleFinger_3_R
+    400024: JT_PinkyFinger_0_L
+    400026: JT_PinkyFinger_0_R
+    400028: JT_PinkyFinger_1_L
+    400030: JT_PinkyFinger_1_R
+    400032: JT_PinkyFinger_2_L
+    400034: JT_PinkyFinger_2_R
+    400036: JT_PinkyFinger_3_L
+    400038: JT_PinkyFinger_3_R
+    400040: JT_PointerFinger_0_L
+    400042: JT_PointerFinger_0_R
+    400044: JT_PointerFinger_1_L
+    400046: JT_PointerFinger_1_R
+    400048: JT_PointerFinger_2_L
+    400050: JT_PointerFinger_2_R
+    400052: JT_PointerFinger_3_L
+    400054: JT_PointerFinger_3_R
+    400056: JT_RingFinger_0_L
+    400058: JT_RingFinger_0_R
+    400060: JT_RingFinger_1_L
+    400062: JT_RingFinger_1_R
+    400064: JT_RingFinger_2_L
+    400066: JT_RingFinger_2_R
+    400068: JT_RingFinger_3_L
+    400070: JT_RingFinger_3_R
+    400072: JT_Shoulder_L
+    400074: JT_Shoulder_R
+    400076: JT_ThumbFinger_0_L
+    400078: JT_ThumbFinger_0_R
+    400080: JT_ThumbFinger_1_L
+    400082: JT_ThumbFinger_1_R
+    400084: JT_ThumbFinger_2_L
+    400086: JT_ThumbFinger_2_R
+    400088: JT_ThumbFinger_3_L
+    400090: JT_ThumbFinger_3_R
+    400092: JT_Wrist_L
+    400094: JT_Wrist_R
+    400096: transform1
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 40
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
