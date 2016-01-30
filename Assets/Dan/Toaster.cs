@@ -10,6 +10,7 @@ public class Toaster : MonoBehaviour
     public GameObject target;
     public GameObject fitSpotOne;
     public GameObject fitSpot;
+    private int rndNumber;
     // Use this for initialization
     void Start()
     {
@@ -40,6 +41,7 @@ public class Toaster : MonoBehaviour
             if (toasterOn == false)
             {
                 toasterOn = true;
+                GetComponent<Collider>().enabled = false;
                 StartCoroutine(toastBread(5.0f));
             }
 
@@ -54,14 +56,19 @@ public class Toaster : MonoBehaviour
         }
     IEnumerator toastBread(float waitTime)
     {
-        
+        yield return new WaitForSeconds(0.5f);
+        GetComponent<Collider>().enabled = true;
         yield return new WaitForSeconds(waitTime);
         toastDone = true;
         toasterOn = false;
         yield return new WaitForSeconds(0.01f);
+        rndNumber = Random.Range(0, 10);
         if (target != null)
-        { target.GetComponent<Rigidbody>().AddForce(Vector3.up * 2110);
-            target.GetComponent<Rigidbody>().AddTorque(transform.up * 35);
+        { target.GetComponent<Rigidbody>().AddForce(Vector3.up * 2710);
+            target.GetComponent<Rigidbody>().AddTorque(transform.up * (52 + rndNumber));
+            target.GetComponent<Rigidbody>().AddTorque(transform.right * (12 +rndNumber));
+            target.GetComponent<Object>().isToast = true;
+            target = null;
         }
     }
 

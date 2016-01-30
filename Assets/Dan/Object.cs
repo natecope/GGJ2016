@@ -9,6 +9,8 @@ public class Object : MonoBehaviour {
     public int speed;
     public bool noGravity;
     public bool inToaster;
+    public bool isToast;
+    public bool hasButter;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
@@ -62,4 +64,16 @@ public class Object : MonoBehaviour {
     {
         rb.useGravity = true;
     }
+    public void OnTriggerEnter(Collider col)
+    {
+        if(isToast == true&& col.gameObject.name == "SPreaButter(Clone)")
+        
+        {
+            hasButter = true;
+        }
+
     }
+
+
+
+        }
