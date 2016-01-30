@@ -5,9 +5,12 @@ public class Object : MonoBehaviour {
     public bool grabbed;
     private Vector3 screenPoint;
     private Vector3 offset;
+    private Rigidbody rb;
+    public int speed;
     // Use this for initialization
     void Start () {
-	
+        rb = GetComponent<Rigidbody>();
+        speed = 6;
 	}
 	
 	// Update is called once per frame
@@ -24,11 +27,14 @@ public class Object : MonoBehaviour {
     }
     void OnMouseDrag()
     {
+        rb.useGravity = false;
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 
 
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-        transform.position = curPosition;
+       // transform.position = curPosition;
+        float step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, curPosition, step);
         if (Input.GetKey(KeyCode.D))
         {
             screenPoint.z += 0.1f;
@@ -39,4 +45,8 @@ public class Object : MonoBehaviour {
             screenPoint.z -= 0.1f;
         }
     }
-}
+    void OnMouseUp()
+    {
+        rb.useGravity = true;
+    }
+    }
