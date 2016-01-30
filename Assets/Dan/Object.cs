@@ -7,6 +7,7 @@ public class Object : MonoBehaviour {
     private Vector3 offset;
     private Rigidbody rb;
     public int speed;
+    public bool noGravity;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
@@ -15,6 +16,8 @@ public class Object : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (noGravity == true)
+        { rb.useGravity = false; }
        // if (grabbed == true)
         //{ transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z); }
 	}
@@ -43,6 +46,10 @@ public class Object : MonoBehaviour {
         if (Input.GetKey(KeyCode.A))
         { //transform.Translate(Vector3.forward * -Time.deltaTime);
             screenPoint.z -= 0.1f;
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.Rotate(Vector3.forward * speed*Time.deltaTime);
         }
     }
     void OnMouseUp()
