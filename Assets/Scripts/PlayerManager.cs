@@ -13,27 +13,28 @@ namespace TerribleMorningPerson
 	public class PlayerManager : MonoBehaviour
 	{
 		public GameObject playerPrefab;
+		public Transform[] cameraMounts;
 
 		const int maxPlayers = 4;
 
 		List<Vector3> playerPositions = new List<Vector3>() {
-			new Vector3( 1.81f, 1.32f, -4.41f ),
-			new Vector3( 1, 1, -10 ),
-			new Vector3( -1, -1, -10 ),
-			new Vector3( 1, -1, -10 ),
+			Vector3.zero,
+			Vector3.zero,
+			Vector3.zero,
+			Vector3.zero,
 		};
 
 		List<Player> players = new List<Player>( maxPlayers );
 
-		PlayerActions keyboardListener;
-		PlayerActions joystickListener;
+		ArmActions keyboardListener;
+		ArmActions joystickListener;
 
 
 		void OnEnable()
 		{
 			InputManager.OnDeviceDetached += OnDeviceDetached;
-			keyboardListener = PlayerActions.CreateWithKeyboardBindings();
-			joystickListener = PlayerActions.CreateWithJoystickBindings();
+			keyboardListener = ArmActions.CreateWithKeyboardBindings();
+			joystickListener = ArmActions.CreateWithJoystickBindings();
 		}
 
 
@@ -67,7 +68,7 @@ namespace TerribleMorningPerson
 		}
 
 
-		bool JoinButtonWasPressedOnListener( PlayerActions actions )
+		bool JoinButtonWasPressedOnListener( ArmActions actions )
 		{
 			return actions.Grab.WasPressed;
 		}
@@ -132,10 +133,11 @@ namespace TerribleMorningPerson
 			if (players.Count < maxPlayers)
 			{
 				// Pop a position off the list. We'll add it back if the player is removed.
-				var playerPosition = playerPositions[0];
-				playerPositions.RemoveAt( 0 );
 
-				var gameObject = (GameObject) Instantiate( playerPrefab, playerPosition, Quaternion.identity );
+
+				var gameObject = (GameObject) Instantiate( playerPrefab, cameraMounts[players.Count].position, Quaternion.identity );
+				gameObject.transform.parent = cameraMounts[players.Count];
+
 				var player = gameObject.GetComponentInChildren<Player>();
 
 				if (inputDevice == null)
@@ -148,7 +150,7 @@ namespace TerribleMorningPerson
 				{
 					// Create a new instance and specifically set it to listen to the
 					// given input device (joystick).
-					var actions = PlayerActions.CreateWithJoystickBindings();
+					var actions = ArmActions.CreateWithJoystickBindings();
 					actions.Device = inputDevice;
 
 					player.Actions = actions;
@@ -185,6 +187,11 @@ namespace TerribleMorningPerson
 				GUI.Label( new Rect( 10, y, 300, y + h ), "Press a button or a/s/d/f key to join!" );
 				y += h;
 			}
+		}
+
+		void MountCamera(GameObject objectToMount){
+
+
 		}
 	}
 }

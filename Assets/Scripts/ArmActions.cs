@@ -4,7 +4,7 @@ using InControl;
 
 namespace TerribleMorningPerson
 {
-	public class PlayerActions : PlayerActionSet
+	public class ArmActions : PlayerActionSet
 	{
 		public PlayerAction Grab;
 		public PlayerAction Left;
@@ -20,7 +20,7 @@ namespace TerribleMorningPerson
 		public PlayerOneAxisAction InOut;
 
 
-		public PlayerActions()
+		public ArmActions()
 		{
 			Grab = CreatePlayerAction( "Grab" );
 			Left = CreatePlayerAction( "Left" );
@@ -37,9 +37,9 @@ namespace TerribleMorningPerson
 		}
 
 
-		public static PlayerActions CreateWithKeyboardBindings()
+		public static ArmActions CreateWithKeyboardBindings()
 		{
-			var actions = new PlayerActions();
+			var actions = new ArmActions();
 
 			actions.Grab.AddDefaultBinding( Key.Space );
 			actions.Up.AddDefaultBinding( Key.UpArrow );
@@ -55,9 +55,9 @@ namespace TerribleMorningPerson
 		}
 
 
-		public static PlayerActions CreateWithJoystickBindings()
+		public static ArmActions CreateWithJoystickBindings()
 		{
-			var actions = new PlayerActions();
+			var actions = new ArmActions();
 
 			actions.Grab.AddDefaultBinding ( InputControlType.Action1);
 
