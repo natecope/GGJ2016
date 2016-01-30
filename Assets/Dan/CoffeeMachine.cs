@@ -19,11 +19,6 @@ public class CoffeeMachine : MonoBehaviour {
     
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "Kcup")
-        { canMakeCoffee = true;
-            Destroy(col.gameObject);
-        }
-        print("hit");
         if (col.gameObject.name != "Kcup")
         {
             if (canMakeCoffee == true)
@@ -33,7 +28,7 @@ public class CoffeeMachine : MonoBehaviour {
 
                     makeCoffee = false;
                 }
-                if (makeCoffee == false)
+                else
                 {
                     makeCoffee = true;
                     StartCoroutine(TurnOn(0.05F));
@@ -41,18 +36,26 @@ public class CoffeeMachine : MonoBehaviour {
                 }
             }
         }
+        if (col.gameObject.name == "Kcup")
+        { canMakeCoffee = true;
+            Destroy(col.gameObject);
+        }
+        
+        
         
     }
     IEnumerator TurnOn(float waitTime)
     {
         if (makeCoffee == false)
         {
-            //StopCoroutine("TurnOn");
+            StopCoroutine("TurnOn");
             yield break;
         }
-        Instantiate(coffee, gun.transform.position, coffee.transform.rotation);
-        yield return new WaitForSeconds(waitTime);
         
-        StartCoroutine(TurnOn(0.05F));
+            Instantiate(coffee, gun.transform.position, coffee.transform.rotation);
+            yield return new WaitForSeconds(waitTime);
+
+            StartCoroutine(TurnOn(0.05F));
+        
     }
 }
