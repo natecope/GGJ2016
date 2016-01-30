@@ -53,7 +53,7 @@ namespace TerribleMorningPerson
 				wristRigidbody.AddRelativeTorque((Vector3.back * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
 				wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
 
-				elbowRigidbody.AddRelativeTorque((Vector3.right * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
+				elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
 
             }
 

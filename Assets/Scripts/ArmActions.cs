@@ -34,7 +34,7 @@ namespace TerribleMorningPerson
 			ShoulderLiftUp = CreatePlayerAction ("ShoulderLiftUp");
 			ShoulderDropDown = CreatePlayerAction ("ShoulderDropDown");
 			WristRotateAxis = CreateOneAxisPlayerAction(WristRotateRight, WristRotateLeft);
-			WristExtendAxis = CreateOneAxisPlayerAction(WristExtend, WristRetract);
+			WristExtendAxis = CreateOneAxisPlayerAction(WristRetract, WristExtend);
 			ElbowExtendAxis = CreateOneAxisPlayerAction(ElbowRetract,ElbowExtend);
 			ShoulderLiftAxis = CreateOneAxisPlayerAction(ShoulderLiftUp, ShoulderDropDown);
 		}
