@@ -8,7 +8,7 @@ namespace TerribleMorningPerson
 
 	public class Player : MonoBehaviour
 	{
-		public PlayerActions Actions { get; set; }
+		public ArmActions Actions { get; set; }
 		public float panningSpeed;
 		public float rotateSpeed;
 		public GameObject elbow;
