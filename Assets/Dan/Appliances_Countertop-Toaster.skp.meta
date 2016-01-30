@@ -1,0 +1,129 @@
+fileFormatVersion: 2
+guid: 4782957421e980c49aede60433756a09
+timeCreated: 1454177448
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 9ae624eaa15556a3deecf3cced6fb3d6
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -0.50198895, y: 0.353536, z: -0.45922232}
+      lookAt: {x: -0.19378236, y: 0.19943273, z: -0.15101577}
+      up: {x: 0.23570226, y: 0.94280905, z: 0.23570226}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Base Supporter
+    100004: Base Supporter 1
+    100006: Base Supporter 2
+    100008: Base Supporter 3
+    100010: Grill
+    100012: Grill 1
+    100014: Handle
+    100016: Toaster
+    400000: //RootNode
+    400002: Base Supporter
+    400004: Base Supporter 1
+    400006: Base Supporter 2
+    400008: Base Supporter 3
+    400010: Grill
+    400012: Grill 1
+    400014: Handle
+    400016: Toaster
+    2300000: Base Supporter
+    2300002: Base Supporter 1
+    2300004: Base Supporter 2
+    2300006: Base Supporter 3
+    2300008: Grill
+    2300010: Grill 1
+    2300012: Handle
+    2300014: Toaster
+    3300000: Base Supporter
+    3300002: Base Supporter 1
+    3300004: Base Supporter 2
+    3300006: Base Supporter 3
+    3300008: Grill
+    3300010: Grill 1
+    3300012: Handle
+    3300014: Toaster
+    4300000: Mesh Grill
+    4300002: Mesh Toaster
+    4300004: Mesh Handle
+    4300006: Mesh Base Supporter
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
