@@ -11,6 +11,9 @@ namespace TerribleMorningPerson
 		public PlayerActions Actions { get; set; }
 		public float panningSpeed;
 		public float rotateSpeed;
+		public GameObject elbow;
+		public GameObject shoulder;
+		public GameObject wrist;
 
 		Renderer cachedRenderer;
 
@@ -41,13 +44,18 @@ namespace TerribleMorningPerson
 			{
 
 				// Moving up,down,left right on 2d plane
-				transform.Translate(Actions.Pan.Value * Time.deltaTime * panningSpeed, Space.World);
+				shoulder.transform.Translate(Actions.Pan.Value * Time.deltaTime * panningSpeed, Space.World);
 
 				// Moving forward and back in 3d space
-				transform.Translate(Vector3.back * Actions.InOut.Value * Time.deltaTime * panningSpeed, Space.World); 
+				shoulder.transform.Translate(Vector3.back * Actions.InOut.Value * Time.deltaTime * panningSpeed, Space.World); 
 
 				// Rotating left/right
-				transform.Rotate(Vector3.back * Actions.Rotate.Value * Time.deltaTime * rotateSpeed, Space.World);
+				wrist.transform.Rotate(Vector3.back * Actions.Rotate.Value * Time.deltaTime * rotateSpeed, Space.World);
+			}
+
+			if(Actions.Grab.WasPressed){
+
+				Debug.Log("Grab pressed!");
 			}
 		}
 
