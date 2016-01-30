@@ -8,10 +8,12 @@ public class Object : MonoBehaviour {
     private Rigidbody rb;
     public int speed;
     public bool noGravity;
+    public bool inToaster;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
         speed = 6;
+        inToaster = false;
 	}
 	
 	// Update is called once per frame
@@ -23,13 +25,17 @@ public class Object : MonoBehaviour {
 	}
     public void OnMouseDown()
     {
+        inToaster = false;
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(
      new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
         //grabbed = true; 
     }
     void OnMouseDrag()
-    {
+    {if (inToaster == true)
+        {
+            return;
+        }
         rb.useGravity = false;
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 
@@ -49,7 +55,7 @@ public class Object : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            transform.Rotate(Vector3.forward * speed*Time.deltaTime);
+            transform.Rotate(Vector3.forward * speed*9*Time.deltaTime);
         }
     }
     void OnMouseUp()
