@@ -12,16 +12,16 @@ public class LeftArmorControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKey(KeyCode.Y))
-         //   if (Input.GetButton("joystick 1 analog 2"))
+           //if (Input.GetButton("joystick 1 analog 2"))
         {
-            float step = 30 * Time.deltaTime;
+            float step = 10 * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, downObj.transform.position, step);
 
         }
        if( Input.GetKey(KeyCode.T))
        // if (Input.GetButton("joystick 1 analog 3"))
         {
-            float step = 30 * Time.deltaTime;
+            float step = 10 * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, upObj.transform.position, step);
 
         }
