@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using InControl;
-
+using Assets.Topher;
 
 namespace TerribleMorningPerson
 {
@@ -18,7 +18,7 @@ namespace TerribleMorningPerson
         public GameObject rudeFinger;
         public GameObject indexFinger;
         public GameObject pinkyFinger;
-       
+        public GameObject itemHeld;
 		Renderer cachedRenderer;
 
 
@@ -55,12 +55,24 @@ namespace TerribleMorningPerson
 
 				elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
 
+                if (Actions.Grab.IsPressed)
+                {
+                    if (itemHeld != null)
+                    {
+                        itemHeld.GetComponent<Rigidbody>().transform.SetParent(null);
+                        itemHeld = null;
+                    }
+                }
+
             }
 
-            if (Actions.Grab.WasPressed)
+        }
+        void isGrabButtonPressed(messageData data)
+        {
+            if(Actions.Grab.IsPressed)
             {
-
-                Debug.Log("Grab pressed!");
+                data.isButtonPressed = true;
+                itemHeld = data.itemToBeHeld;
             }
         }
     }
