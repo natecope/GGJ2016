@@ -153,14 +153,16 @@ public class Player : MonoBehaviour
 
     void isGrabButtonPressed(messageData data)
     {
-
-        if (Actions.Grab.IsPressed && pickupTimeoutEnabled == false && itemHeld == null)
-        {
-            data.isButtonPressed = true;
-            itemHeld = data.itemToBeHeld;
-            pickupTimeoutEnabled = true;
-            StartCoroutine(PickupTimer(0.5f));
-        }
+		if(Actions!=null)
+		{
+	        if (Actions.Grab.IsPressed && pickupTimeoutEnabled == false && itemHeld == null)
+	        {
+	            data.isButtonPressed = true;
+	            itemHeld = data.itemToBeHeld;
+	            pickupTimeoutEnabled = true;
+	            StartCoroutine(PickupTimer(0.5f));
+	        }
+		}
     }
 
     IEnumerator PickupTimer(float time)
