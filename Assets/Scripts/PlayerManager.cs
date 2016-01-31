@@ -12,8 +12,9 @@ namespace TerribleMorningPerson
 	//
 	public class PlayerManager : MonoBehaviour
 	{
-		public GameObject playerPrefab;
+		public GameObject[] playerPrefabs;
 		public Transform[] cameraMounts;
+
 
 		const int maxPlayers = 4;
 
@@ -135,7 +136,7 @@ namespace TerribleMorningPerson
 				// Pop a position off the list. We'll add it back if the player is removed.
 
 
-				var gameObject = (GameObject) Instantiate( playerPrefab, cameraMounts[players.Count].position, Quaternion.identity );
+				var gameObject = (GameObject) Instantiate( playerPrefabs[players.Count], cameraMounts[players.Count].position, cameraMounts[players.Count].rotation );
 				gameObject.transform.parent = cameraMounts[players.Count];
 
 				var player = gameObject.GetComponentInChildren<Player>();

@@ -1,0 +1,1031 @@
+fileFormatVersion: 2
+guid: 240146ab42e7e5d4da04622ef9772f03
+timeCreated: 1454196747
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000097000000980000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000600100006101000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f010000900100009101000092010000930100009401000095010000960100009701000098010000990100009a0100009b0100009c0100009d0100009e0100009f010000a0010000a1010000a2010000a3010000a4010000a5010000a6010000a7010000a8010000a9010000aa010000ab010000ac010000ad010000ae010000
+  assetHash:
+    serializedVersion: 2
+    Hash: 3d08fe3b4d6ecba004a30b18457627db
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 3.6358378, y: 6.418817, z: 2.3035123}
+      lookAt: {x: 2.6129715, y: -2.6665742, z: -4.3223696}
+      up: {x: -0.122761324, y: 0.5937655, z: -0.7952184}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 2:25
+    100002: Audio_CD-DVD_Player
+    100004: Audio_VCR_Player
+    100006: Base
+    100008: bass_drum
+    100010: Bed
+    100012: Book Shelf
+    100014: bovenste gedeelte
+    100016: bovenste gedeelte 1
+    100018: button
+    100020: button 1
+    100022: button 2
+    100024: button 3
+    100026: button 4
+    100028: button#1
+    100030: button#1 1
+    100032: button#1 2
+    100034: button#1 3
+    100036: button#1 4
+    100038: button#1 5
+    100040: button#1 6
+    100042: button#1 7
+    100044: button#1 8
+    100046: button#3
+    100048: button#3 1
+    100050: button#3 10
+    100052: button#3 11
+    100054: button#3 12
+    100056: button#3 13
+    100058: button#3 14
+    100060: button#3 15
+    100062: button#3 16
+    100064: button#3 17
+    100066: button#3 18
+    100068: button#3 19
+    100070: button#3 2
+    100072: button#3 3
+    100074: button#3 4
+    100076: button#3 5
+    100078: button#3 6
+    100080: button#3 7
+    100082: button#3 8
+    100084: button#3 9
+    100086: Button2#1
+    100088: Button2#1 1
+    100090: Button2#1 2
+    100092: Button2#1 3
+    100094: Cameron Lloyd
+    100096: Chair
+    100098: Chair 1
+    100100: CLOCK 1
+    100102: coffetable.dxf
+    100104: coffetable.dxf 1
+    100106: Component#1
+    100108: Component#1 1
+    100110: Component#1 2
+    100112: Component#1 3
+    100114: Component#1 4
+    100116: Component#1 5
+    100118: Component#1 6
+    100120: Component#1 7
+    100122: Component#2
+    100124: Component#2 1
+    100126: Component#2 2
+    100128: Component#2 3
+    100130: computer
+    100132: computer.dxf
+    100134: Cordless Phone
+    100136: Corn
+    100138: Desk chair
+    100140: Desktop printer, scanner, fax
+    100142: Detail#1
+    100144: Detail#1 1
+    100146: Detail#1 2
+    100148: Detail#1 3
+    100150: Detail#1 4
+    100152: Detail#1 5
+    100154: Detail#1 6
+    100156: Detail#1 7
+    100158: Detail2
+    100160: Detail2 1
+    100162: Detail2 2
+    100164: Detail2 3
+    100166: Detail3
+    100168: Detail3 1
+    100170: Detail3 2
+    100172: Detail4
+    100174: Detail4 1
+    100176: Detail4 2
+    100178: dial
+    100180: dial 1
+    100182: dial 2
+    100184: Dresser
+    100186: Drum Kit
+    100188: Drumstick
+    100190: Drumstick 1
+    100192: Drumstick#1
+    100194: Drumstick#1 1
+    100196: Drumstick#2
+    100198: Drumstick#2 1
+    100200: Drumsticks
+    100202: Dustbin - Trash Can
+    100204: End Table
+    100206: End Table 1
+    100208: filing cabinet
+    100210: filing cabinet 1
+    100212: Foosball table 30 x 56
+    100214: Foot#1
+    100216: Foot#1 1
+    100218: Foot#1 2
+    100220: Foot#1 3
+    100222: Foot#1 4
+    100224: Foot#1 5
+    100226: Foot#1 6
+    100228: Foot#1 7
+    100230: frame
+    100232: frame 1
+    100234: frame 2
+    100236: frame 3
+    100238: frame 4
+    100240: grass couch
+    100242: grass couch_MeshPart0
+    100244: grass couch_MeshPart1
+    100246: Group 13
+    100248: Group 147
+    100250: Group 151
+    100252: Group 155
+    100254: Group 157
+    100256: Group 158
+    100258: Group 160
+    100260: Group 161
+    100262: Group 163
+    100264: Group 164
+    100266: Group 166
+    100268: Group 168
+    100270: Group 170
+    100272: Group 172
+    100274: Group 174
+    100276: Group 176
+    100278: Group 178
+    100280: Group 180
+    100282: Group 182
+    100284: Group 243
+    100286: Group 249
+    100288: Group 251
+    100290: Group 252
+    100292: Group 254
+    100294: Group 256
+    100296: Group 258
+    100298: Group 267
+    100300: Group 3
+    100302: Group 350
+    100304: Group 4
+    100306: Group 407
+    100308: Group 408
+    100310: Group 410
+    100312: Group 413
+    100314: Group 415
+    100316: Group 417
+    100318: Group 419
+    100320: Group 421
+    100322: Group 423
+    100324: Group 425
+    100326: Group 427
+    100328: Group 429
+    100330: Group 6
+    100332: Group 9
+    100334: HOME
+    100336: HOME#1
+    100338: Image 193
+    100340: Lamp
+    100342: Light
+    100344: Light 1
+    100346: Light 2
+    100348: Light 3
+    100350: Light 4
+    100352: Luxurios Bed
+    100354: man
+    100356: man 1
+    100358: man 10
+    100360: man 11
+    100362: man 12
+    100364: man 13
+    100366: man 14
+    100368: man 15
+    100370: man 16
+    100372: man 17
+    100374: man 18
+    100376: man 19
+    100378: man 2
+    100380: man 20
+    100382: man 21
+    100384: man 22
+    100386: man 23
+    100388: man 24
+    100390: man 25
+    100392: man 3
+    100394: man 4
+    100396: man 5
+    100398: man 6
+    100400: man 7
+    100402: man 8
+    100404: man 9
+    100406: Mesa com tv e aparelhos.
+    100408: //RootNode
+    100410: onderframe
+    100412: pole
+    100414: pole 1
+    100416: pole 2
+    100418: pole 3
+    100420: pole 4
+    100422: pole 5
+    100424: pole 6
+    100426: pole 7
+    100428: quarter
+    100430: quarter 1
+    100432: quarter 2
+    100434: quarter 3
+    100436: radio selector
+    100438: rugleuning
+    100440: rugleuning 1
+    100442: skp73
+    100444: snooze button
+    100446: Stool
+    100448: Switch
+    100450: Switch#1
+    100452: Switch#1 1
+    100454: Switch#1 2
+    100456: Switch#1 3
+    100458: Switch#1 4
+    100460: Switch#1 5
+    100462: Switch#2
+    100464: Switch#2 1
+    100466: Table
+    100468: Table 1
+    100470: wichair.dxf
+    100472: wiel
+    100474: wiel 1
+    100476: wiel 2
+    100478: wiel 3
+    100480: wiel 4
+    400000: 2:25
+    400002: Audio_CD-DVD_Player
+    400004: Audio_VCR_Player
+    400006: Base
+    400008: bass_drum
+    400010: Bed
+    400012: Book Shelf
+    400014: bovenste gedeelte
+    400016: bovenste gedeelte 1
+    400018: button
+    400020: button 1
+    400022: button 2
+    400024: button 3
+    400026: button 4
+    400028: button#1
+    400030: button#1 1
+    400032: button#1 2
+    400034: button#1 3
+    400036: button#1 4
+    400038: button#1 5
+    400040: button#1 6
+    400042: button#1 7
+    400044: button#1 8
+    400046: button#3
+    400048: button#3 1
+    400050: button#3 10
+    400052: button#3 11
+    400054: button#3 12
+    400056: button#3 13
+    400058: button#3 14
+    400060: button#3 15
+    400062: button#3 16
+    400064: button#3 17
+    400066: button#3 18
+    400068: button#3 19
+    400070: button#3 2
+    400072: button#3 3
+    400074: button#3 4
+    400076: button#3 5
+    400078: button#3 6
+    400080: button#3 7
+    400082: button#3 8
+    400084: button#3 9
+    400086: Button2#1
+    400088: Button2#1 1
+    400090: Button2#1 2
+    400092: Button2#1 3
+    400094: Cameron Lloyd
+    400096: Chair
+    400098: Chair 1
+    400100: CLOCK 1
+    400102: coffetable.dxf
+    400104: coffetable.dxf 1
+    400106: Component#1
+    400108: Component#1 1
+    400110: Component#1 2
+    400112: Component#1 3
+    400114: Component#1 4
+    400116: Component#1 5
+    400118: Component#1 6
+    400120: Component#1 7
+    400122: Component#2
+    400124: Component#2 1
+    400126: Component#2 2
+    400128: Component#2 3
+    400130: computer
+    400132: computer.dxf
+    400134: Cordless Phone
+    400136: Corn
+    400138: Desk chair
+    400140: Desktop printer, scanner, fax
+    400142: Detail#1
+    400144: Detail#1 1
+    400146: Detail#1 2
+    400148: Detail#1 3
+    400150: Detail#1 4
+    400152: Detail#1 5
+    400154: Detail#1 6
+    400156: Detail#1 7
+    400158: Detail2
+    400160: Detail2 1
+    400162: Detail2 2
+    400164: Detail2 3
+    400166: Detail3
+    400168: Detail3 1
+    400170: Detail3 2
+    400172: Detail4
+    400174: Detail4 1
+    400176: Detail4 2
+    400178: dial
+    400180: dial 1
+    400182: dial 2
+    400184: Dresser
+    400186: Drum Kit
+    400188: Drumstick
+    400190: Drumstick 1
+    400192: Drumstick#1
+    400194: Drumstick#1 1
+    400196: Drumstick#2
+    400198: Drumstick#2 1
+    400200: Drumsticks
+    400202: Dustbin - Trash Can
+    400204: End Table
+    400206: End Table 1
+    400208: filing cabinet
+    400210: filing cabinet 1
+    400212: Foosball table 30 x 56
+    400214: Foot#1
+    400216: Foot#1 1
+    400218: Foot#1 2
+    400220: Foot#1 3
+    400222: Foot#1 4
+    400224: Foot#1 5
+    400226: Foot#1 6
+    400228: Foot#1 7
+    400230: frame
+    400232: frame 1
+    400234: frame 2
+    400236: frame 3
+    400238: frame 4
+    400240: grass couch
+    400242: grass couch_MeshPart0
+    400244: grass couch_MeshPart1
+    400246: Group 13
+    400248: Group 147
+    400250: Group 151
+    400252: Group 155
+    400254: Group 157
+    400256: Group 158
+    400258: Group 160
+    400260: Group 161
+    400262: Group 163
+    400264: Group 164
+    400266: Group 166
+    400268: Group 168
+    400270: Group 170
+    400272: Group 172
+    400274: Group 174
+    400276: Group 176
+    400278: Group 178
+    400280: Group 180
+    400282: Group 182
+    400284: Group 243
+    400286: Group 249
+    400288: Group 251
+    400290: Group 252
+    400292: Group 254
+    400294: Group 256
+    400296: Group 258
+    400298: Group 267
+    400300: Group 3
+    400302: Group 350
+    400304: Group 4
+    400306: Group 407
+    400308: Group 408
+    400310: Group 410
+    400312: Group 413
+    400314: Group 415
+    400316: Group 417
+    400318: Group 419
+    400320: Group 421
+    400322: Group 423
+    400324: Group 425
+    400326: Group 427
+    400328: Group 429
+    400330: Group 6
+    400332: Group 9
+    400334: HOME
+    400336: HOME#1
+    400338: Image 193
+    400340: Lamp
+    400342: Light
+    400344: Light 1
+    400346: Light 2
+    400348: Light 3
+    400350: Light 4
+    400352: Luxurios Bed
+    400354: man
+    400356: man 1
+    400358: man 10
+    400360: man 11
+    400362: man 12
+    400364: man 13
+    400366: man 14
+    400368: man 15
+    400370: man 16
+    400372: man 17
+    400374: man 18
+    400376: man 19
+    400378: man 2
+    400380: man 20
+    400382: man 21
+    400384: man 22
+    400386: man 23
+    400388: man 24
+    400390: man 25
+    400392: man 3
+    400394: man 4
+    400396: man 5
+    400398: man 6
+    400400: man 7
+    400402: man 8
+    400404: man 9
+    400406: Mesa com tv e aparelhos.
+    400408: //RootNode
+    400410: onderframe
+    400412: pole
+    400414: pole 1
+    400416: pole 2
+    400418: pole 3
+    400420: pole 4
+    400422: pole 5
+    400424: pole 6
+    400426: pole 7
+    400428: quarter
+    400430: quarter 1
+    400432: quarter 2
+    400434: quarter 3
+    400436: radio selector
+    400438: rugleuning
+    400440: rugleuning 1
+    400442: skp73
+    400444: snooze button
+    400446: Stool
+    400448: Switch
+    400450: Switch#1
+    400452: Switch#1 1
+    400454: Switch#1 2
+    400456: Switch#1 3
+    400458: Switch#1 4
+    400460: Switch#1 5
+    400462: Switch#2
+    400464: Switch#2 1
+    400466: Table
+    400468: Table 1
+    400470: wichair.dxf
+    400472: wiel
+    400474: wiel 1
+    400476: wiel 2
+    400478: wiel 3
+    400480: wiel 4
+    2300000: 2:25
+    2300002: Audio_CD-DVD_Player
+    2300004: Audio_VCR_Player
+    2300006: Base
+    2300008: bass_drum
+    2300010: Book Shelf
+    2300012: bovenste gedeelte
+    2300014: bovenste gedeelte 1
+    2300016: button
+    2300018: button 1
+    2300020: button 2
+    2300022: button 3
+    2300024: button 4
+    2300026: button#1
+    2300028: button#1 1
+    2300030: button#1 2
+    2300032: button#1 3
+    2300034: button#1 4
+    2300036: button#1 5
+    2300038: button#1 6
+    2300040: button#1 7
+    2300042: button#1 8
+    2300044: Button2#1
+    2300046: Button2#1 1
+    2300048: Button2#1 2
+    2300050: Button2#1 3
+    2300052: coffetable.dxf
+    2300054: coffetable.dxf 1
+    2300056: Component#1
+    2300058: Component#1 1
+    2300060: Component#1 2
+    2300062: Component#1 3
+    2300064: Component#1 4
+    2300066: Component#1 5
+    2300068: Component#1 6
+    2300070: Component#1 7
+    2300072: Component#2
+    2300074: Component#2 1
+    2300076: Component#2 2
+    2300078: Component#2 3
+    2300080: computer.dxf
+    2300082: Corn
+    2300084: Desktop printer, scanner, fax
+    2300086: Detail#1
+    2300088: Detail#1 1
+    2300090: Detail#1 2
+    2300092: Detail#1 3
+    2300094: Detail#1 4
+    2300096: Detail#1 5
+    2300098: Detail#1 6
+    2300100: Detail#1 7
+    2300102: Detail2
+    2300104: Detail2 1
+    2300106: Detail2 2
+    2300108: Detail2 3
+    2300110: Detail3
+    2300112: Detail3 1
+    2300114: Detail3 2
+    2300116: Detail4
+    2300118: Detail4 1
+    2300120: Detail4 2
+    2300122: dial
+    2300124: dial 1
+    2300126: dial 2
+    2300128: Dresser
+    2300130: Drumstick
+    2300132: Drumstick 1
+    2300134: Dustbin - Trash Can
+    2300136: filing cabinet
+    2300138: filing cabinet 1
+    2300140: Foot#1
+    2300142: Foot#1 1
+    2300144: Foot#1 2
+    2300146: Foot#1 3
+    2300148: Foot#1 4
+    2300150: Foot#1 5
+    2300152: Foot#1 6
+    2300154: Foot#1 7
+    2300156: frame
+    2300158: frame 1
+    2300160: frame 2
+    2300162: frame 3
+    2300164: frame 4
+    2300166: grass couch_MeshPart0
+    2300168: grass couch_MeshPart1
+    2300170: Group 13
+    2300172: Group 147
+    2300174: Group 151
+    2300176: Group 155
+    2300178: Group 158
+    2300180: Group 161
+    2300182: Group 164
+    2300184: Group 166
+    2300186: Group 168
+    2300188: Group 170
+    2300190: Group 172
+    2300192: Group 174
+    2300194: Group 176
+    2300196: Group 178
+    2300198: Group 180
+    2300200: Group 182
+    2300202: Group 243
+    2300204: Group 249
+    2300206: Group 252
+    2300208: Group 254
+    2300210: Group 256
+    2300212: Group 258
+    2300214: Group 267
+    2300216: Group 350
+    2300218: Group 4
+    2300220: Group 408
+    2300222: Group 410
+    2300224: Group 413
+    2300226: Group 415
+    2300228: Group 417
+    2300230: Group 419
+    2300232: Group 421
+    2300234: Group 423
+    2300236: Group 425
+    2300238: Group 427
+    2300240: Group 429
+    2300242: Group 6
+    2300244: Group 9
+    2300246: Image 193
+    2300248: Lamp
+    2300250: Light
+    2300252: Light 1
+    2300254: Light 2
+    2300256: Light 3
+    2300258: Light 4
+    2300260: man
+    2300262: man 1
+    2300264: man 10
+    2300266: man 11
+    2300268: man 12
+    2300270: man 13
+    2300272: man 14
+    2300274: man 15
+    2300276: man 16
+    2300278: man 17
+    2300280: man 18
+    2300282: man 19
+    2300284: man 2
+    2300286: man 20
+    2300288: man 21
+    2300290: man 22
+    2300292: man 23
+    2300294: man 24
+    2300296: man 25
+    2300298: man 3
+    2300300: man 4
+    2300302: man 5
+    2300304: man 6
+    2300306: man 7
+    2300308: man 8
+    2300310: man 9
+    2300312: //RootNode
+    2300314: onderframe
+    2300316: pole
+    2300318: pole 1
+    2300320: pole 2
+    2300322: pole 3
+    2300324: pole 4
+    2300326: pole 5
+    2300328: pole 6
+    2300330: pole 7
+    2300332: quarter
+    2300334: quarter 1
+    2300336: quarter 2
+    2300338: quarter 3
+    2300340: radio selector
+    2300342: rugleuning
+    2300344: rugleuning 1
+    2300346: snooze button
+    2300348: Stool
+    2300350: Switch
+    2300352: Switch#1
+    2300354: Switch#1 1
+    2300356: Switch#1 2
+    2300358: Switch#1 3
+    2300360: Switch#1 4
+    2300362: Switch#1 5
+    2300364: Switch#2
+    2300366: Switch#2 1
+    2300368: wichair.dxf
+    2300370: wiel
+    2300372: wiel 1
+    2300374: wiel 2
+    2300376: wiel 3
+    2300378: wiel 4
+    3300000: 2:25
+    3300002: Audio_CD-DVD_Player
+    3300004: Audio_VCR_Player
+    3300006: Base
+    3300008: bass_drum
+    3300010: Book Shelf
+    3300012: bovenste gedeelte
+    3300014: bovenste gedeelte 1
+    3300016: button
+    3300018: button 1
+    3300020: button 2
+    3300022: button 3
+    3300024: button 4
+    3300026: button#1
+    3300028: button#1 1
+    3300030: button#1 2
+    3300032: button#1 3
+    3300034: button#1 4
+    3300036: button#1 5
+    3300038: button#1 6
+    3300040: button#1 7
+    3300042: button#1 8
+    3300044: Button2#1
+    3300046: Button2#1 1
+    3300048: Button2#1 2
+    3300050: Button2#1 3
+    3300052: coffetable.dxf
+    3300054: coffetable.dxf 1
+    3300056: Component#1
+    3300058: Component#1 1
+    3300060: Component#1 2
+    3300062: Component#1 3
+    3300064: Component#1 4
+    3300066: Component#1 5
+    3300068: Component#1 6
+    3300070: Component#1 7
+    3300072: Component#2
+    3300074: Component#2 1
+    3300076: Component#2 2
+    3300078: Component#2 3
+    3300080: computer.dxf
+    3300082: Corn
+    3300084: Desktop printer, scanner, fax
+    3300086: Detail#1
+    3300088: Detail#1 1
+    3300090: Detail#1 2
+    3300092: Detail#1 3
+    3300094: Detail#1 4
+    3300096: Detail#1 5
+    3300098: Detail#1 6
+    3300100: Detail#1 7
+    3300102: Detail2
+    3300104: Detail2 1
+    3300106: Detail2 2
+    3300108: Detail2 3
+    3300110: Detail3
+    3300112: Detail3 1
+    3300114: Detail3 2
+    3300116: Detail4
+    3300118: Detail4 1
+    3300120: Detail4 2
+    3300122: dial
+    3300124: dial 1
+    3300126: dial 2
+    3300128: Dresser
+    3300130: Drumstick
+    3300132: Drumstick 1
+    3300134: Dustbin - Trash Can
+    3300136: filing cabinet
+    3300138: filing cabinet 1
+    3300140: Foot#1
+    3300142: Foot#1 1
+    3300144: Foot#1 2
+    3300146: Foot#1 3
+    3300148: Foot#1 4
+    3300150: Foot#1 5
+    3300152: Foot#1 6
+    3300154: Foot#1 7
+    3300156: frame
+    3300158: frame 1
+    3300160: frame 2
+    3300162: frame 3
+    3300164: frame 4
+    3300166: grass couch_MeshPart0
+    3300168: grass couch_MeshPart1
+    3300170: Group 13
+    3300172: Group 147
+    3300174: Group 151
+    3300176: Group 155
+    3300178: Group 158
+    3300180: Group 161
+    3300182: Group 164
+    3300184: Group 166
+    3300186: Group 168
+    3300188: Group 170
+    3300190: Group 172
+    3300192: Group 174
+    3300194: Group 176
+    3300196: Group 178
+    3300198: Group 180
+    3300200: Group 182
+    3300202: Group 243
+    3300204: Group 249
+    3300206: Group 252
+    3300208: Group 254
+    3300210: Group 256
+    3300212: Group 258
+    3300214: Group 267
+    3300216: Group 350
+    3300218: Group 4
+    3300220: Group 408
+    3300222: Group 410
+    3300224: Group 413
+    3300226: Group 415
+    3300228: Group 417
+    3300230: Group 419
+    3300232: Group 421
+    3300234: Group 423
+    3300236: Group 425
+    3300238: Group 427
+    3300240: Group 429
+    3300242: Group 6
+    3300244: Group 9
+    3300246: Image 193
+    3300248: Lamp
+    3300250: Light
+    3300252: Light 1
+    3300254: Light 2
+    3300256: Light 3
+    3300258: Light 4
+    3300260: man
+    3300262: man 1
+    3300264: man 10
+    3300266: man 11
+    3300268: man 12
+    3300270: man 13
+    3300272: man 14
+    3300274: man 15
+    3300276: man 16
+    3300278: man 17
+    3300280: man 18
+    3300282: man 19
+    3300284: man 2
+    3300286: man 20
+    3300288: man 21
+    3300290: man 22
+    3300292: man 23
+    3300294: man 24
+    3300296: man 25
+    3300298: man 3
+    3300300: man 4
+    3300302: man 5
+    3300304: man 6
+    3300306: man 7
+    3300308: man 8
+    3300310: man 9
+    3300312: //RootNode
+    3300314: onderframe
+    3300316: pole
+    3300318: pole 1
+    3300320: pole 2
+    3300322: pole 3
+    3300324: pole 4
+    3300326: pole 5
+    3300328: pole 6
+    3300330: pole 7
+    3300332: quarter
+    3300334: quarter 1
+    3300336: quarter 2
+    3300338: quarter 3
+    3300340: radio selector
+    3300342: rugleuning
+    3300344: rugleuning 1
+    3300346: snooze button
+    3300348: Stool
+    3300350: Switch
+    3300352: Switch#1
+    3300354: Switch#1 1
+    3300356: Switch#1 2
+    3300358: Switch#1 3
+    3300360: Switch#1 4
+    3300362: Switch#1 5
+    3300364: Switch#2
+    3300366: Switch#2 1
+    3300368: wichair.dxf
+    3300370: wiel
+    3300372: wiel 1
+    3300374: wiel 2
+    3300376: wiel 3
+    3300378: wiel 4
+    4300000: Mesh my+dream+bedroom+first
+    4300002: Mesh Group 4
+    4300004: Mesh Group 6
+    4300006: Mesh Group 9
+    4300008: Mesh radio selector
+    4300010: Mesh Group 13
+    4300012: Mesh button
+    4300014: Mesh snooze button
+    4300016: Mesh Component#2
+    4300018: Mesh Component#1
+    4300020: Mesh dial
+    4300022: Mesh button#1
+    4300024: Mesh button#1
+    4300026: Mesh button#1
+    4300028: Mesh Audio_CD-DVD_Player
+    4300030: Mesh Foot#1
+    4300032: Mesh Switch
+    4300034: Mesh Detail#1
+    4300036: Mesh Detail2
+    4300038: Mesh Detail3
+    4300040: Mesh Audio_VCR_Player
+    4300042: Mesh Switch#1
+    4300044: Mesh Detail4
+    4300046: Mesh Detail4
+    4300048: Mesh Group 147
+    4300050: Mesh Group 151
+    4300052: Mesh Group 155
+    4300054: Mesh Group 158
+    4300056: Mesh Group 161
+    4300058: Mesh Group 164
+    4300060: Mesh Group 166
+    4300062: Mesh coffetable.dxf
+    4300064: Mesh computer.dxf
+    4300066: Mesh computer.dxf
+    4300068: Mesh Desktop printer, scanner, fax
+    4300070: Mesh Switch#2
+    4300072: Mesh Button2#1
+    4300074: Mesh Light
+    4300076: Mesh Corn
+    4300078: Mesh Base
+    4300080: Mesh Group 243
+    4300082: Mesh Dresser
+    4300084: Mesh Lamp
+    4300086: Mesh Group 249
+    4300088: Mesh Group 252
+    4300090: Mesh Group 254
+    4300092: Mesh Group 256
+    4300094: Mesh Group 258
+    4300096: Mesh Book Shelf
+    4300098: Mesh Dustbin - Trash Can
+    4300100: Mesh Stool
+    4300102: Mesh Group 267
+    4300104: Mesh 2:25
+    4300106: Mesh quarter
+    4300108: Mesh man
+    4300110: Mesh man
+    4300112: Mesh pole
+    4300114: Mesh grass couch_MeshPart0
+    4300116: Mesh grass couch_MeshPart1
+    4300118: Mesh Group 350
+    4300120: Mesh bass_drum
+    4300122: Mesh bovenste gedeelte
+    4300124: Mesh rugleuning
+    4300126: Mesh onderframe
+    4300128: Mesh wiel
+    4300130: Mesh frame
+    4300132: Mesh filing cabinet
+    4300134: Mesh wichair.dxf
+    4300136: Mesh Drumstick
+    4300138: Mesh Group 413
+    4300140: Mesh Group 415
+    4300142: Mesh Group 417
+    4300144: Mesh Group 419
+    4300146: Mesh Group 421
+    4300148: Mesh Group 423
+    4300150: Mesh Group 425
+    4300152: Mesh Group 427
+    4300154: Mesh Group 429
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
