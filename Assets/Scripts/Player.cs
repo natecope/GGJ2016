@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using InControl;
 using Assets.Topher;
+using System.Collections;
 
 namespace TerribleMorningPerson
 {
@@ -19,6 +20,7 @@ namespace TerribleMorningPerson
         public GameObject indexFinger;
         public GameObject pinkyFinger;
         public GameObject itemHeld;
+        public bool pickupTimeoutEnabled;
 		Renderer cachedRenderer;
 
 
@@ -55,25 +57,42 @@ namespace TerribleMorningPerson
 
 				elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
 
-                if (Actions.Grab.IsPressed)
+                if (Actions.Grab.IsPressed && pickupTimeoutEnabled==false) 
                 {
                     if (itemHeld != null)
                     {
-                        itemHeld.GetComponent<Rigidbody>().transform.SetParent(null);
+                        if (itemHeld.GetComponent<Rigidbody>() != null)
+                        {
+                            itemHeld.GetComponent<Rigidbody>().transform.SetParent(null);
+                            itemHeld.GetComponent<Rigidbody>().AddForce(Vector3.back * 400);
+
+                        }
                         itemHeld = null;
+                        pickupTimeoutEnabled = true;
+                        StartCoroutine(PickupTimer(0.5f));
+
                     }
                 }
 
             }
 
-        }
+        } 
         void isGrabButtonPressed(messageData data)
         {
-            if(Actions.Grab.IsPressed)
+
+            if (Actions.Grab.IsPressed && pickupTimeoutEnabled == false && itemHeld == null)
             {
                 data.isButtonPressed = true;
                 itemHeld = data.itemToBeHeld;
+                pickupTimeoutEnabled = true;
+                StartCoroutine(PickupTimer(0.5f));
             }
+        }
+
+        IEnumerator PickupTimer(float time)
+        {
+            yield return new WaitForSeconds(time);
+            pickupTimeoutEnabled =false;
         }
     }
 }
