@@ -36,7 +36,7 @@ public class Toaster : MonoBehaviour
     }
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Toast") { target = col.gameObject; }
+        if (col.gameObject.tag == "grab") { target = col.gameObject; }
         if (col.gameObject.tag == "Player")
         {
             
