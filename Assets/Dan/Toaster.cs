@@ -74,7 +74,7 @@ public class Toaster : MonoBehaviour
                 target = null;
                 yield break;
             }
-            target.GetComponent<Rigidbody>().AddForce(Vector3.up * 3710);
+            target.GetComponent<Rigidbody>().AddForce(Vector3.up * 4710);
             target.GetComponent<Rigidbody>().AddTorque(transform.up * (52 ));
             target.GetComponent<Rigidbody>().AddTorque(transform.right * (12));
             target.GetComponent<Object>().isToast = true;
