@@ -44,6 +44,6 @@ public class Clock : MonoBehaviour {
     {
         
         yield return new WaitForSeconds(waitTime);
-        Application.LoadLevel("Dan");
+        Application.LoadLevel("DanArms");
     }
 }

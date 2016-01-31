@@ -20,6 +20,8 @@ public class FitObject : MonoBehaviour {
            // col.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                col.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             col.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            col.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            col.gameObject.GetComponent<Rigidbody>().useGravity = true;
             col.transform.localEulerAngles = new Vector3(0, 270.0f, 90.0f);
             col.gameObject.transform.position = fitSpot.transform.position;
             //col.gameObject.GetComponent<Rigidbody>().isKinematic = false;
