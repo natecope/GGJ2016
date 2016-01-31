@@ -31,7 +31,7 @@ public class CoffeeMachine : MonoBehaviour {
                 }
                 else
                 {
-                    GetComponent<Collider>().enabled = false;
+                    //GetComponent<Collider>().enabled = false;
                     makeCoffee = true;
 
                     StartCoroutine(TurnOn(0.05F));
@@ -54,15 +54,16 @@ public class CoffeeMachine : MonoBehaviour {
     
     IEnumerator TurnOn(float waitTime)
     {
+        
+        
+            Instantiate(coffee, gun.transform.position, coffee.transform.rotation);
+            yield return new WaitForSeconds(waitTime);
+        GetComponent<Collider>().enabled = true;
         if (makeCoffee == false)
         {
             StopCoroutine("TurnOn");
             yield break;
         }
-        
-            Instantiate(coffee, gun.transform.position, coffee.transform.rotation);
-            yield return new WaitForSeconds(waitTime);
-        GetComponent<Collider>().enabled = true;
         StartCoroutine(TurnOn(0.05F));
         
     }

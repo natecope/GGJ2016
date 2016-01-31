@@ -11,6 +11,8 @@ public class Toaster : MonoBehaviour
     public GameObject fitSpotOne;
     public GameObject fitSpot;
     private int rndNumber;
+    public GameObject explosion;
+    public GameObject gun;
     // Use this for initialization
     void Start()
     {
@@ -64,9 +66,17 @@ public class Toaster : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         rndNumber = Random.Range(0, 10);
         if (target != null)
-        { target.GetComponent<Rigidbody>().AddForce(Vector3.up * 2710);
-            target.GetComponent<Rigidbody>().AddTorque(transform.up * (52 + rndNumber));
-            target.GetComponent<Rigidbody>().AddTorque(transform.right * (12 +rndNumber));
+        {
+            if (target.gameObject.name == "Phone")
+            {
+                Instantiate(explosion, gun.transform.position, explosion.transform.rotation);
+                Destroy(target.gameObject);
+                target = null;
+                yield break;
+            }
+            target.GetComponent<Rigidbody>().AddForce(Vector3.up * 3710);
+            target.GetComponent<Rigidbody>().AddTorque(transform.up * (52 ));
+            target.GetComponent<Rigidbody>().AddTorque(transform.right * (12));
             target.GetComponent<Object>().isToast = true;
             target = null;
         }
