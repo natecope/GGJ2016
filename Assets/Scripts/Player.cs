@@ -53,10 +53,6 @@ public enum PlayerType { LeftArm, RightArm }
                 Rigidbody wristRigidbody = (Rigidbody)wrist.GetComponent("Rigidbody");
                 Rigidbody elbowRigidbody = (Rigidbody)elbow.GetComponent("Rigidbody");
 
-				wristRigidbody.AddRelativeTorque((Vector3.back * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
-				wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
-				elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
-
                 if (playerType == PlayerType.LeftArm)
                 {
 
