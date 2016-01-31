@@ -2,7 +2,9 @@ using System;
 using UnityEngine;
 using InControl;
 using Assets.Topher;
+using System.Collections;
 
+<<<<<<< HEAD
 public enum PlayerType {LeftArm, RightArm, Head}
 
 public class Player : MonoBehaviour
@@ -26,14 +28,39 @@ public class Player : MonoBehaviour
     public GameObject mount;
 	public GameObject mainCam;
 	void OnDisable()
+=======
+public enum PlayerType { LeftArm, RightArm }
+
+
+	public class Player : MonoBehaviour
+>>>>>>> origin/master
 	{
-		if (Actions != null)
+		public ArmActions Actions { get; set; }
+        public PlayerType playerType;
+        public float wristExtendSpeed;
+		public float wristRotateSpeed;
+		public float elbowExtendSpeed;
+		public GameObject elbow;
+		public GameObject shoulder;
+		public GameObject wrist;
+        public GameObject rudeFinger;
+        public GameObject indexFinger;
+        public GameObject pinkyFinger;
+        public GameObject itemHeld;
+        public bool pickupTimeoutEnabled;
+		Renderer cachedRenderer;
+
+
+		void OnDisable()
 		{
-			Actions.Destroy();
+			if (Actions != null)
+			{
+				Actions.Destroy();
+			}
 		}
-	}
 
 
+<<<<<<< HEAD
 	void Start()
 	{
 		cachedRenderer = GetComponent<Renderer>();
@@ -66,25 +93,74 @@ public class Player : MonoBehaviour
 				elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
 
 			} else if (playerType == PlayerType.RightArm) {
+=======
+		void Start()
+		{
+			cachedRenderer = GetComponent<Renderer>();
+		}
 
-				wristRigidbody.AddRelativeTorque((Vector3.forward * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
-				wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
-
-				elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
-
-			} 
-
-            if (Actions.Grab.IsPressed)
+        
+        void FixedUpdate()
+        {
+            if (Actions == null)
             {
-                if (itemHeld != null)
+                // If no controller exists for this cube, just make it translucent.
+                //cachedRenderer.material.color = new Color( 1.0f, 1.0f, 1.0f, 0.2f );
+            }
+            else
+            {
+>>>>>>> origin/master
+
+                Rigidbody wristRigidbody = (Rigidbody)wrist.GetComponent("Rigidbody");
+                Rigidbody elbowRigidbody = (Rigidbody)elbow.GetComponent("Rigidbody");
+
+                if (playerType == PlayerType.LeftArm)
                 {
-                    itemHeld.GetComponent<Rigidbody>().transform.SetParent(null);
-                    itemHeld = null;
+
+<<<<<<< HEAD
+			} 
+=======
+                    wristRigidbody.AddRelativeTorque((Vector3.back * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
+                    wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
+                    elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
                 }
+                else if (playerType == PlayerType.RightArm)
+                {
+                    wristRigidbody.AddRelativeTorque((Vector3.forward * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
+                    wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
+                    elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
+                }
+>>>>>>> origin/master
+
+                if (Actions.Grab.IsPressed && pickupTimeoutEnabled==false) 
+                {
+                    if (itemHeld != null)
+                    {
+                      
+                          itemHeld.transform.SetParent(null);
+                          itemHeld = null;
+                        pickupTimeoutEnabled = true;
+                        StartCoroutine(PickupTimer(0.5f));
+
+                    }
+                }
+
             }
 
+        } 
+        void isGrabButtonPressed(messageData data)
+        {
+
+            if (Actions.Grab.IsPressed && pickupTimeoutEnabled == false && itemHeld == null)
+            {
+                data.isButtonPressed = true;
+                itemHeld = data.itemToBeHeld;
+                pickupTimeoutEnabled = true;
+                StartCoroutine(PickupTimer(0.5f));
+            }
         }
 
+<<<<<<< HEAD
 		if(HeadActions != null){
 			if(playerType == PlayerType.Head){
 
@@ -103,11 +179,13 @@ public class Player : MonoBehaviour
     void isGrabButtonPressed(messageData data)
     {
         if(Actions.Grab.IsPressed)
+=======
+        IEnumerator PickupTimer(float time)
+>>>>>>> origin/master
         {
-            data.isButtonPressed = true;
-            itemHeld = data.itemToBeHeld;
+            yield return new WaitForSeconds(time);
+            pickupTimeoutEnabled =false;
         }
     }
-}
 
 

@@ -15,13 +15,17 @@ namespace Assets.Topher
 
             if(other.transform.parent !=null)
             {
-                data.itemToBeHeld = other.transform.parent.gameObject;
+                data.itemToBeHeld = other.transform.root.gameObject;
                 this.gameObject.SendMessageUpwards("isGrabButtonPressed", data);
                 if (data.isButtonPressed)
                 {
                     Debug.Log("We're grabbing!!");
                     other.transform.root.SetParent(this.transform);
-
+                    Rigidbody rootRigidbody = (Rigidbody)other.transform.root.GetComponent<Rigidbody>();
+                    if (rootRigidbody != null)
+                    {
+                        rootRigidbody.useGravity = false;
+                    }
                 }
             }
         }
