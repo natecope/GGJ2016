@@ -49,11 +49,11 @@ public class Player : MonoBehaviour
         if (playerType == PlayerType.LeftArm)
         {
             mount = GameObject.Find("LeftHand Mount");
-            //shoulderObj.GetComponent<HingeJoint>().connectedBody = mount.GetComponent<Rigidbody>();
+            shoulder.GetComponent<HingeJoint>().connectedBody = mount.GetComponent<Rigidbody>();
         }
 		if (playerType == PlayerType.RightArm){
 			mount = GameObject.Find("RightHand Mount");
-			//shoulderObj.GetComponent<HingeJoint>().connectedBody = mount.GetComponent<Rigidbody>();
+			shoulder.GetComponent<HingeJoint>().connectedBody = mount.GetComponent<Rigidbody>();
 
 		}
     }
@@ -61,18 +61,21 @@ public class Player : MonoBehaviour
     
     void FixedUpdate()
     {
-
-		if (Actions.Grab.IsPressed && pickupTimeoutEnabled==false) 
-		{
-			if (itemHeld != null)
+		if(Actions != null){
+			
+			if (Actions.Grab.IsPressed && pickupTimeoutEnabled==false) 
 			{
+				if (itemHeld != null)
+				{
 
-				itemHeld.transform.SetParent(null);
-				itemHeld = null;
-				pickupTimeoutEnabled = true;
-				StartCoroutine(PickupTimer(0.5f));
+					itemHeld.transform.SetParent(null);
+					itemHeld = null;
+					pickupTimeoutEnabled = true;
+					StartCoroutine(PickupTimer(0.5f));
 
+				}
 			}
+
 		}
 
 
@@ -92,7 +95,7 @@ public class Player : MonoBehaviour
 			} else if (playerType == PlayerType.RightArm) {
 				
 
-                wristRigidbody.AddRelativeTorque((Vector3.back * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
+                wristRigidbody.AddRelativeTorque((Vector3.forward * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
                 wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
                 elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
             }
