@@ -16,11 +16,11 @@ public class CoffeeMachine : MonoBehaviour {
 	void Update () {
 	
 	}
-    
+
     public void OnCollisionEnter(Collision col)
     {
         print("hit");
-        if (col.gameObject.name != "Kcup")
+        if (col.gameObject.tag != "Coffee")
         {
             if (canMakeCoffee == true)
             {
@@ -31,20 +31,27 @@ public class CoffeeMachine : MonoBehaviour {
                 }
                 else
                 {
+                    GetComponent<Collider>().enabled = false;
                     makeCoffee = true;
+
                     StartCoroutine(TurnOn(0.05F));
 
                 }
             }
         }
-        if (col.gameObject.name == "Kcup")
-        { canMakeCoffee = true;
-            Destroy(col.gameObject);
-        }
-        
-        
         
     }
+        public void OnTriggerEnter(Collider col2)
+    { if (col2.gameObject.name == "Kcup")
+        {
+            Destroy(col2.gameObject);
+            canMakeCoffee = true;
+
+        }
+    }
+        
+        
+    
     IEnumerator TurnOn(float waitTime)
     {
         if (makeCoffee == false)
@@ -55,8 +62,8 @@ public class CoffeeMachine : MonoBehaviour {
         
             Instantiate(coffee, gun.transform.position, coffee.transform.rotation);
             yield return new WaitForSeconds(waitTime);
-
-            StartCoroutine(TurnOn(0.05F));
+        GetComponent<Collider>().enabled = true;
+        StartCoroutine(TurnOn(0.05F));
         
     }
 }

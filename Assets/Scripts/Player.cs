@@ -20,8 +20,9 @@ public class Player : MonoBehaviour
     public GameObject pinkyFinger;
     public GameObject itemHeld;
 	Renderer cachedRenderer;
-
-
+    //making moveable shoulder
+    public GameObject shoulderObj;
+    public GameObject mount;
 	void OnDisable()
 	{
 		if (Actions != null)
@@ -34,7 +35,12 @@ public class Player : MonoBehaviour
 	void Start()
 	{
 		cachedRenderer = GetComponent<Renderer>();
-	}
+        if (playerType == PlayerType.LeftArm)
+        {
+            mount = GameObject.Find("LeftHand Mount");
+            shoulderObj.GetComponent<HingeJoint>().connectedBody = mount.GetComponent<Rigidbody>();
+        }
+        }
 
     
     void FixedUpdate()
