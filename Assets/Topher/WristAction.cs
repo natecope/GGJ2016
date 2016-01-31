@@ -21,7 +21,11 @@ namespace Assets.Topher
                 {
                     Debug.Log("We're grabbing!!");
                     other.transform.root.SetParent(this.transform);
-
+                    Rigidbody rootRigidbody = (Rigidbody)other.transform.root.GetComponent<Rigidbody>();
+                    if (rootRigidbody != null)
+                    {
+                        rootRigidbody.useGravity = false;
+                    }
                 }
             }
         }
