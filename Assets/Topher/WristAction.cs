@@ -12,14 +12,15 @@ namespace Assets.Topher
         {
             messageData data = new messageData();
             Debug.Log("Collide! " + other.gameObject.tag);
-            data.itemToBeHeld = other.gameObject;
-            if (other.attachedRigidbody != null)
+
+            if(other.transform.parent !=null)
             {
+                data.itemToBeHeld = other.transform.parent.gameObject;
                 this.gameObject.SendMessageUpwards("isGrabButtonPressed", data);
                 if (data.isButtonPressed)
                 {
                     Debug.Log("We're grabbing!!");
-                    other.attachedRigidbody.transform.SetParent(this.transform);
+                    other.transform.root.SetParent(this.transform);
 
                 }
             }
