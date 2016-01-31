@@ -33,13 +33,13 @@ public class Player : MonoBehaviour
 
 
 
-		void OnDisable()
+	void OnDisable()
+	{
+		if (Actions != null)
 		{
-			if (Actions != null)
-			{
-				Actions.Destroy();
-			}
+			Actions.Destroy();
 		}
+	}
 
 
 
@@ -61,6 +61,21 @@ public class Player : MonoBehaviour
     
     void FixedUpdate()
     {
+
+		if (Actions.Grab.IsPressed && pickupTimeoutEnabled==false) 
+		{
+			if (itemHeld != null)
+			{
+
+				itemHeld.transform.SetParent(null);
+				itemHeld = null;
+				pickupTimeoutEnabled = true;
+				StartCoroutine(PickupTimer(0.5f));
+
+			}
+		}
+
+
 		if(Actions!=null)
 		{
 
@@ -100,28 +115,9 @@ public class Player : MonoBehaviour
 
                 }
             }
+		}
 
-        }
-
-    }
-
-
-
-            if (Actions.Grab.IsPressed && pickupTimeoutEnabled==false) 
-            {
-                if (itemHeld != null)
-                {
-                  
-                    itemHeld.transform.SetParent(null);
-                    itemHeld = null;
-                    pickupTimeoutEnabled = true;
-                    StartCoroutine(PickupTimer(0.5f));
-
-                }
-            }
-
-        }
-
+		
 
 		if(HeadActions != null){
 			if(playerType == PlayerType.Head){
@@ -145,9 +141,8 @@ public class Player : MonoBehaviour
 
 			}
 
-
 		}
-	} 
+	}
 
 
 
