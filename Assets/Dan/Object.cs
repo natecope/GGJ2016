@@ -73,7 +73,13 @@ public class Object : MonoBehaviour {
         }
 
     }
-
-
-
+    public void OnTriggerExit(Collider col3)
+    {
+        if (col3.gameObject.tag == "Player")
+        {
+            rb.useGravity = true;
+            rb.isKinematic = false;
         }
+    }
+
+    }
