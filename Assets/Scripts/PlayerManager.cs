@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using InControl;
 
 
-namespace TerribleMorningPerson
-{
+
 	// This example iterates on the basic multiplayer example by using action sets with
 	// bindings to support both joystick and keyboard players. It would be a good idea
 	// to understand the basic multiplayer example first before looking a this one.
@@ -195,4 +194,3 @@ namespace TerribleMorningPerson
 
 		}
 	}
-}
