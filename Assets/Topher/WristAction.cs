@@ -11,8 +11,7 @@ namespace Assets.Topher
         void OnTriggerStay(Collider other)
         {
             messageData data = new messageData();
-            Debug.Log("Collide! " + other.gameObject.tag);
-
+           
             if(other.transform.parent !=null)
             {
                 data.itemToBeHeld = other.transform.root.gameObject;
@@ -21,10 +20,12 @@ namespace Assets.Topher
                 {
                     Debug.Log("We're grabbing!!");
                     other.transform.root.SetParent(this.transform);
-                    Rigidbody rootRigidbody = (Rigidbody)other.transform.root.GetComponent<Rigidbody>();
-                    if (rootRigidbody != null)
+                    Rigidbody[] rootRigidbody = (Rigidbody[])data.itemToBeHeld.GetComponents<Rigidbody>();
+                    if (rootRigidbody.Length > 0)
                     {
-                        rootRigidbody.useGravity = false;
+                        rootRigidbody[0].isKinematic = true;
+                        rootRigidbody[0].useGravity = false;
+                        
                     }
                 }
             }
