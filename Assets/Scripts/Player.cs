@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 	public float wristExtendSpeed;
 	public float wristRotateSpeed;
 	public float elbowExtendSpeed;
+	public float headMovementSpeed;
+	public float headLeanSpeed;
 	public GameObject elbow;
 	public GameObject shoulder;
 	public GameObject wrist;
@@ -104,6 +106,17 @@ public class Player : MonoBehaviour
 					Debug.Log("Head action button pressed!");
 
 				}
+
+				// Moving along floor
+				transform.Translate(Vector3.forward * HeadActions.Pan.Y * headMovementSpeed * Time.deltaTime, Space.Self);
+				transform.Translate(Vector3.right * HeadActions.Pan.X * headMovementSpeed * Time.deltaTime, Space.Self);
+
+				// Rotate head 360
+				transform.Rotate(Vector3.left * HeadActions.Rotate.Y * headLeanSpeed * Time.deltaTime, Space.Self);
+				transform.Rotate(Vector3.forward * HeadActions.Rotate.X * headLeanSpeed * Time.deltaTime, Space.Self);
+
+				// Raise/lower body
+				transform.Translate(Vector3.up * HeadActions.Height.Value * headMovementSpeed * Time.deltaTime, Space.Self);
 
 			}
 

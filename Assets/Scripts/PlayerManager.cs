@@ -77,7 +77,7 @@ public class PlayerManager : MonoBehaviour
 		{
 			var inputDevice = InputManager.ActiveDevice;
 
-			if (ThereIsNoPlayerUsingJoystick( inputDevice ))
+			if (ThereIsNoHeadPlayerUsingJoystick( inputDevice ))
 			{
 				CreatePlayer( inputDevice );
 			}
@@ -139,6 +139,10 @@ public class PlayerManager : MonoBehaviour
 		return FindPlayerUsingJoystick( inputDevice ) == null;
 	}
 
+	bool ThereIsNoHeadPlayerUsingJoystick( InputDevice inputDevice){
+
+		return HeadFindPlayerUsingJoystick( inputDevice ) == null;
+	}
 
 	Player HeadFindPlayerUsingKeyboard()
 	{
@@ -213,7 +217,7 @@ public class PlayerManager : MonoBehaviour
 			if(players.Count == 0){
 
 				var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], mainCam.transform.position, mainCam.transform.rotation);
-				gameObject.transform.parent = mainCam.transform;
+				mainCam.transform.parent = gameObject.transform;
 
 				player = gameObject.GetComponentInChildren<Player>();
 
