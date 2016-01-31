@@ -2,8 +2,7 @@
 using InControl;
 
 
-namespace TerribleMorningPerson
-{
+
 	public class HeadActions : PlayerActionSet
 	{
 		public PlayerAction Grab;
@@ -80,5 +79,5 @@ namespace TerribleMorningPerson
 			return actions;
 		}
 	}
-}
+
 

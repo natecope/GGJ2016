@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using InControl;
 
 
-namespace TerribleMorningPerson
-{
+
 	// This example iterates on the basic multiplayer example by using action sets with
 	// bindings to support both joystick and keyboard players. It would be a good idea
 	// to understand the basic multiplayer example first before looking a this one.
 	//
 	public class PlayerManager : MonoBehaviour
 	{
-		public GameObject playerPrefab;
+		public GameObject[] playerPrefabs;
 		public Transform[] cameraMounts;
+
 
 		const int maxPlayers = 4;
 
@@ -135,7 +135,7 @@ namespace TerribleMorningPerson
 				// Pop a position off the list. We'll add it back if the player is removed.
 
 
-				var gameObject = (GameObject) Instantiate( playerPrefab, cameraMounts[players.Count].position, Quaternion.identity );
+				var gameObject = (GameObject) Instantiate( playerPrefabs[players.Count], cameraMounts[players.Count].position, cameraMounts[players.Count].rotation );
 				gameObject.transform.parent = cameraMounts[players.Count];
 
 				var player = gameObject.GetComponentInChildren<Player>();
@@ -194,4 +194,3 @@ namespace TerribleMorningPerson
 
 		}
 	}
-}

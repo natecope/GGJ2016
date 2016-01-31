@@ -4,13 +4,14 @@ using InControl;
 using Assets.Topher;
 using System.Collections;
 
-namespace TerribleMorningPerson
-{
+public enum PlayerType { LeftArm, RightArm }
+
 
 	public class Player : MonoBehaviour
 	{
 		public ArmActions Actions { get; set; }
-		public float wristExtendSpeed;
+        public PlayerType playerType;
+        public float wristExtendSpeed;
 		public float wristRotateSpeed;
 		public float elbowExtendSpeed;
 		public GameObject elbow;
@@ -54,8 +55,21 @@ namespace TerribleMorningPerson
 
 				wristRigidbody.AddRelativeTorque((Vector3.back * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
 				wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
-
 				elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
+
+                if (playerType == PlayerType.LeftArm)
+                {
+
+                    wristRigidbody.AddRelativeTorque((Vector3.back * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
+                    wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
+                    elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
+                }
+                else if (playerType == PlayerType.RightArm)
+                {
+                    wristRigidbody.AddRelativeTorque((Vector3.forward * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
+                    wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
+                    elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
+                }
 
                 if (Actions.Grab.IsPressed && pickupTimeoutEnabled==false) 
                 {
@@ -95,5 +109,5 @@ namespace TerribleMorningPerson
             pickupTimeoutEnabled =false;
         }
     }
-}
+
 
