@@ -64,7 +64,7 @@ namespace TerribleMorningPerson
                         if (itemHeld.GetComponent<Rigidbody>() != null)
                         {
                             itemHeld.GetComponent<Rigidbody>().transform.SetParent(null);
-                            itemHeld.GetComponent<Rigidbody>().AddForce(Vector3.back * 400);
+                            itemHeld.GetComponent<Rigidbody>().AddForce(Vector3.up * 400);
 
                         }
                         itemHeld = null;
