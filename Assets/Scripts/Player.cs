@@ -76,10 +76,35 @@ public class Player : MonoBehaviour
 
 			} else if (playerType == PlayerType.RightArm) {
 				
+
                 wristRigidbody.AddRelativeTorque((Vector3.back * Actions.WristRotateAxis * wristRotateSpeed), ForceMode.VelocityChange);
                 wristRigidbody.AddRelativeTorque((Vector3.right * Actions.WristExtendAxis * wristExtendSpeed), ForceMode.VelocityChange);
                 elbowRigidbody.AddRelativeTorque((Vector3.down * Actions.ElbowExtendAxis * elbowExtendSpeed), ForceMode.VelocityChange);
             }
+
+            if (Actions.Grab.IsPressed && pickupTimeoutEnabled == false)
+            {
+                if (itemHeld != null)
+                {
+                    Rigidbody[] itemRigidbody = itemHeld.GetComponents<Rigidbody>();
+                    itemHeld.transform.SetParent(null);
+
+                    if (itemRigidbody.Length > 0)
+                    {
+                        itemRigidbody[0].useGravity = true;
+                        itemRigidbody[0].isKinematic = false;
+                    }
+                    itemHeld = null;
+                    pickupTimeoutEnabled = true;
+                    StartCoroutine(PickupTimer(0.5f));
+
+                }
+            }
+
+        }
+
+    }
+
 
 
             if (Actions.Grab.IsPressed && pickupTimeoutEnabled==false) 
@@ -123,6 +148,7 @@ public class Player : MonoBehaviour
 
 		}
 	} 
+
 
 
     void isGrabButtonPressed(messageData data)
