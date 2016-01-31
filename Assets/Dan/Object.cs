@@ -77,8 +77,8 @@ public class Object : MonoBehaviour {
     {
         if (col3.gameObject.tag == "Player")
         {
-            rb.useGravity = true;
-            rb.isKinematic = false;
+            //rb.useGravity = true;
+            //rb.isKinematic = false;
         }
     }
 
