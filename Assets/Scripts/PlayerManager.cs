@@ -59,7 +59,7 @@ public class PlayerManager : MonoBehaviour
 		{
 			var inputDevice = InputManager.ActiveDevice;
 
-			if (ThereIsNoPlayerUsingJoystick( inputDevice ))
+			if (ThereIsNoPlayerUsingJoystick( inputDevice ) && ThereIsNoHeadPlayerUsingJoystick( inputDevice))
 			{
 				CreatePlayer( inputDevice );
 			}
@@ -67,7 +67,7 @@ public class PlayerManager : MonoBehaviour
 
 		if (JoinButtonWasPressedOnListener( keyboardListener ))
 		{
-			if (ThereIsNoPlayerUsingKeyboard())
+			if (ThereIsNoPlayerUsingKeyboard() && ThereIsNoHeadPlayerUsingKeyboard())
 			{
 				CreatePlayer( null );
 			}
@@ -77,7 +77,7 @@ public class PlayerManager : MonoBehaviour
 		{
 			var inputDevice = InputManager.ActiveDevice;
 
-			if (ThereIsNoHeadPlayerUsingJoystick( inputDevice ))
+			if (ThereIsNoHeadPlayerUsingJoystick( inputDevice ) && ThereIsNoPlayerUsingJoystick( inputDevice))
 			{
 				CreatePlayer( inputDevice );
 			}
@@ -85,7 +85,7 @@ public class PlayerManager : MonoBehaviour
 
 		if (HeadJoinButtonWasPressedOnListener( headKeyboardListener ))
 		{
-			if (ThereIsNoPlayerUsingKeyboard())
+			if (ThereIsNoPlayerUsingKeyboard() && ThereIsNoHeadPlayerUsingKeyboard())
 			{
 				CreatePlayer( null );
 			}
@@ -110,9 +110,12 @@ public class PlayerManager : MonoBehaviour
 		for (int i = 0; i < playerCount; i++)
 		{
 			var player = players[i];
-			if (player.HeadActions.Device == inputDevice)
+			if (player.HeadActions != null)
 			{
-				return player;
+				if(player.HeadActions.Device == inputDevice)
+					{
+						return player;
+					}
 			}
 		}
 
@@ -125,9 +128,14 @@ public class PlayerManager : MonoBehaviour
 		for (int i = 0; i < playerCount; i++)
 		{
 			var player = players[i];
-			if (player.Actions.Device == inputDevice)
+			if(player.Actions != null)
 			{
-				return player;
+				
+				if (player.Actions.Device == inputDevice)
+				{
+					return player;
+				}
+
 			}
 		}
 
