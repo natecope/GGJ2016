@@ -15,7 +15,7 @@ namespace Assets.Topher
 
             if(other.transform.parent !=null)
             {
-                data.itemToBeHeld = other.transform.parent.gameObject;
+                data.itemToBeHeld = other.transform.root.gameObject;
                 this.gameObject.SendMessageUpwards("isGrabButtonPressed", data);
                 if (data.isButtonPressed)
                 {

@@ -71,12 +71,7 @@ public enum PlayerType { LeftArm, RightArm }
                 {
                     if (itemHeld != null)
                     {
-                        if (itemHeld.GetComponent<Rigidbody>() != null)
-                        {
-                            itemHeld.GetComponent<Rigidbody>().transform.SetParent(null);
-                            itemHeld.GetComponent<Rigidbody>().AddForce(Vector3.down *400);
-                            
-                        }
+                      
                           itemHeld.transform.SetParent(null);
                           itemHeld = null;
                         pickupTimeoutEnabled = true;
