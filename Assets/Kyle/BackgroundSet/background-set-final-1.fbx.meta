@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: cafcc1d1935c34e5bb526c6c6bd92de8
+timeCreated: 1454202719
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Door1
+    100004: Door2
+    100006: Doorknob1
+    100008: Doorknob2
+    100010: Forst1
+    100012: Forst2
+    100014: House1
+    100016: House2
+    100018: pPlane1
+    100020: pPlane5
+    100022: RoadLawn
+    100024: Sky
+    100026: Stairs1
+    100028: Stairs2
+    100030: transform1
+    100032: transform2
+    100034: Window1
+    100036: Window2
+    100038: Window3
+    100040: Window4
+    100042: Window5
+    100044: Window6
+    100046: Window7
+    100048: Window8
+    400000: //RootNode
+    400002: Door1
+    400004: Door2
+    400006: Doorknob1
+    400008: Doorknob2
+    400010: Forst1
+    400012: Forst2
+    400014: House1
+    400016: House2
+    400018: pPlane1
+    400020: pPlane5
+    400022: RoadLawn
+    400024: Sky
+    400026: Stairs1
+    400028: Stairs2
+    400030: transform1
+    400032: transform2
+    400034: Window1
+    400036: Window2
+    400038: Window3
+    400040: Window4
+    400042: Window5
+    400044: Window6
+    400046: Window7
+    400048: Window8
+    2300000: Door1
+    2300002: Door2
+    2300004: Doorknob1
+    2300006: Doorknob2
+    2300008: Forst1
+    2300010: Forst2
+    2300012: House1
+    2300014: House2
+    2300016: RoadLawn
+    2300018: Sky
+    2300020: Stairs1
+    2300022: Stairs2
+    2300024: Window1
+    2300026: Window2
+    2300028: Window3
+    2300030: Window4
+    2300032: Window5
+    2300034: Window6
+    2300036: Window7
+    2300038: Window8
+    3300000: Door1
+    3300002: Door2
+    3300004: Doorknob1
+    3300006: Doorknob2
+    3300008: Forst1
+    3300010: Forst2
+    3300012: House1
+    3300014: House2
+    3300016: RoadLawn
+    3300018: Sky
+    3300020: Stairs1
+    3300022: Stairs2
+    3300024: Window1
+    3300026: Window2
+    3300028: Window3
+    3300030: Window4
+    3300032: Window5
+    3300034: Window6
+    3300036: Window7
+    3300038: Window8
+    4300000: House1
+    4300002: Stairs1
+    4300004: Door1
+    4300006: Doorknob1
+    4300008: Forst1
+    4300010: Forst2
+    4300012: Sky
+    4300014: Window3
+    4300016: Window4
+    4300018: Window1
+    4300020: Window2
+    4300022: Stairs2
+    4300024: Door2
+    4300026: Window7
+    4300028: Window8
+    4300030: Window6
+    4300032: Window5
+    4300034: House2
+    4300036: RoadLawn
+    4300038: Doorknob2
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
